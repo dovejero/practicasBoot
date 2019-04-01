@@ -1,4 +1,142 @@
 @import url(reset.css);
+@import url('https://fonts.googleapis.com/css?family=Handlee|Montserrat:400,700&subset=latin-ext');
+/*font-family: 'Montserrat', sans-serif;
+font-family: 'Handlee', cursive;*/
 *{
 	box-sizing: border-box;
 }
+body{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+}
+
+.container-fluid{
+	width: 100%;
+}
+.container{
+	max-width: 1100px;
+	margin: 0 auto;
+}
+/*h1{
+	font-size: 
+}
+h2{
+
+}*/
+/*Header*/
+header .submenu{
+	background-color: #21242e;
+	color: white;
+	text-align: left;
+	padding: 10px 0px;
+}
+header .submenu .container div{
+	width: 25%;
+	float: left;
+	padding-left: 20px;
+}
+header .submenu a{
+	color: white;
+	text-decoration: none;
+}
+header .submenu i {
+	color: #fa573a;
+}
+header .submenu a:hover{
+	color: #fa573a;
+}
+header .submenu .container div:last-child, header .submenu .container div:nth-child(3){
+	text-align: right;
+}
+header nav{
+	background-color: white;
+	padding: 20px 0px 0px;
+}
+header nav .logo {
+	width: 100px;
+	height: auto;
+	float: left;
+}
+header nav .menu {
+	padding-top: 5px;
+	float: right;
+}
+header nav .menu li{
+	display: inline-block;
+	margin-left: 15px;
+}
+header nav a{
+	text-decoration: none;
+	color: #666
+}
+header nav a:hover{
+	color: #fa573a
+}
+header nav .activo{
+	color: #fa573a
+}
+/*Fin Header*/
+
+/*Hero*/
+
+.hero{
+	background-image: url(../images/hero.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height: 80vh;
+	background-color: darkgrey;
+	background-blend-mode: soft-light;
+}
+.hero>div{
+	padding: 7%;
+}
+/*.hero>div:nth-child(2n) {
+  background-color: red;
+}*/
+.hero>div h2{
+	font-size: 2em;
+	font-family: 'Handlee', cursive;
+	color: white;
+}
+.hero>div h3{
+	font-size: 1.5em;
+		margin: 20px 0px;
+	font-family: 'Handlee', cursive;
+	color: #fa573a
+}
+.hero>div div a{
+	background-color: #fa573a;
+	color: white;
+	text-decoration: none;
+	padding: 15px;
+	margin: 20px 0px;
+	display: inline-block;
+	border: 2px solid #fa573a;
+}
+.hero>div div a:hover{
+	background-color: transparent;
+	color: #fa573a;
+	border: 2px solid #fa573a;
+}
+.hero .social li{
+	display: inline-block;
+	margin-right: 30px;
+}
+.hero .social li a{
+	color: white;
+}
+/*Fin Hero*/
+
+/*General*/
+img {
+	width: 100%;
+	height: auto;
+}
+.row:after{
+	content: "";
+	height: 0px;
+	display: block;
+	clear:both;
+}
+/*Fin General*/
