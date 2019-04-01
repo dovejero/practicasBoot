@@ -17,12 +17,6 @@ body{
 	max-width: 1100px;
 	margin: 0 auto;
 }
-/*h1{
-	font-size: 
-}
-h2{
-
-}*/
 /*Header*/
 header .submenu{
 	background-color: #21242e;
@@ -128,6 +122,45 @@ header nav .activo{
 }
 /*Fin Hero*/
 
+/*Main*/
+main h1{
+	display: none;
+}
+main section{
+	background-color: red;
+}
+main .section-light h2{
+	color: black;
+	font-family: 'Handlee', cursive;
+	text-align: center;
+	font-size: 2em;
+
+}
+main .section-light h2 span{
+	color: #fa573a
+}
+main section .underline{
+	position: relative;
+	margin: 0 auto 40px auto;
+	height: 15px;
+	width: 115px;
+}
+main section .underline hr{
+	width: 115px;
+	position: absolute;
+	top: 6px;
+	border-color: #fa573a;
+}
+main section .underline span{
+	display: block;
+	font-weight: 700;
+	position: absolute;
+	top: 7.5px;
+	left: 51px;
+	color: #fa573a
+}
+/*Fin Main*/
+
 /*General*/
 img {
 	width: 100%;
@@ -138,5 +171,23 @@ img {
 	height: 0px;
 	display: block;
 	clear:both;
+}
+.mt_50{
+	margin-top: 50px;
+}
+.mb_50{
+	margin-bottom: 50px;
+}
+.mx_50{
+	margin: 50px 0;
+}
+.pt_50{
+	padding-top: 50px;
+}
+.pb_50{
+	padding-bottom: 50px;
+}
+.px_50{
+	padding: 50px 0;
 }
 /*Fin General*/
