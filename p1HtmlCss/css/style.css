@@ -1,4 +1,49 @@
 @import url(reset.css);
+@import url('https://fonts.googleapis.com/css?family=Handlee|Montserrat:400,700&subset=latin-ext');
+/*font-family: 'Montserrat', sans-serif;
+font-family: 'Handlee', cursive;*/
 *{
 	box-sizing: border-box;
 }
+body{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+}
+
+.container-fluid{
+	width: 100%;
+}
+.container{
+	max-width: 1100px;
+	margin: 0 auto;
+}
+/*Hero*/
+header .submenu{
+	background-color: #21242e;
+	color: white;
+	text-align: left;
+	padding: 10px 0px;
+}
+header .submenu .container div{
+	width: 25%;
+	float: left;
+	padding-left: 20px;
+}
+header .submenu a{
+	color: white;
+	text-decoration: none;
+}
+header .submenu a:hover{
+	color: #fa573a;
+}
+header .submenu .container div:last-child, header .submenu .container div:nth-child(3){
+	text-align: right;
+}
+
+.row:after{
+	content: "";
+	height: 0px;
+	display: block;
+	clear:both;
+}
+/*Fin Hero*/
