@@ -23,7 +23,7 @@ body{
 h2{
 
 }*/
-/*Hero*/
+/*Header*/
 header .submenu{
 	background-color: #21242e;
 	color: white;
@@ -58,7 +58,7 @@ header nav .logo {
 	float: left;
 }
 header nav .menu {
-	padding-top: 7px;
+	padding-top: 5px;
 	float: right;
 }
 header nav .menu li{
@@ -75,6 +75,60 @@ header nav a:hover{
 header nav .activo{
 	color: #fa573a
 }
+/*Fin Header*/
+
+/*Hero*/
+
+.hero{
+	background-image: url(../images/hero.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height: 80vh;
+	background-color: darkgrey;
+	background-blend-mode: soft-light;
+}
+.hero>div{
+	padding: 7%;
+}
+/*.hero>div:nth-child(2n) {
+  background-color: red;
+}*/
+.hero>div h2{
+	font-size: 2em;
+	font-family: 'Handlee', cursive;
+	color: white;
+}
+.hero>div h3{
+	font-size: 1.5em;
+		margin: 20px 0px;
+	font-family: 'Handlee', cursive;
+	color: #fa573a
+}
+.hero>div div a{
+	background-color: #fa573a;
+	color: white;
+	text-decoration: none;
+	padding: 15px;
+	margin: 20px 0px;
+	display: inline-block;
+	border: 2px solid #fa573a;
+}
+.hero>div div a:hover{
+	background-color: transparent;
+	color: #fa573a;
+	border: 2px solid #fa573a;
+}
+.hero .social li{
+	display: inline-block;
+	margin-right: 30px;
+}
+.hero .social li a{
+	color: white;
+}
+/*Fin Hero*/
+
+/*General*/
 img {
 	width: 100%;
 	height: auto;
@@ -85,4 +139,4 @@ img {
 	display: block;
 	clear:both;
 }
-/*Fin Hero*/
+/*Fin General*/
