@@ -264,4 +264,86 @@ img {
 .px_50{
 	padding: 50px 0;
 }
+.hamburguesa{
+	display: none;
+}
 /*Fin General*/
+/*Responsive medias queryes*/
+@media (max-width: 1100px) {
+	header .submenu {
+		padding-right: 20px;
+	}
+	header nav{
+		padding-right: 20px;
+		padding-left: 20px;
+		padding-bottom: 20px;
+	}
+	.rota{
+		padding-left: 5%;
+	}
+	.rota .foto img{
+		margin-left: 6%;
+	}
+}
+@media (max-width: 768px) {
+	header .submenu div{
+		text-align: center !important;
+		font-size: 90%;
+	}
+}
+@media (max-width: 652px) {
+	header .submenu .mostrar{
+		display: none;
+	}
+	header .submenu div{
+		font-size: 120%;
+	} 
+	header nav .logo {
+		float: left;
+	}
+	header nav .menu {
+		float: none;
+		padding-top: 60px;
+	}
+	header nav .menu li{
+		display: block;
+		margin-left: 15px;
+		padding-bottom: 7px;
+		border-bottom: 1px solid #ddd;
+	}
+	.hamburguesa {
+		display: block;
+		float: right;
+	}
+	.hamburguesa .linea{
+		border-top: 2px solid #666;
+		width: 30px;
+		margin-bottom: 10px;
+		cursor: pointer;
+	}
+	main section article{
+		width: 50%;
+		border-left: 1px solid gray;
+		padding-left: 8px;
+		margin-top: 20px;
+	}
+	main section article:last-child{
+		width: 100%;
+		border-left: 1px solid gray;
+		padding-left: 8px;
+		margin-top: 20px;
+	}
+}
+@media (max-width: 426px) {
+	main section article{
+		width: 100%;
+		border-left: 0px !important;
+		border-bottom: 1px solid gray;
+		margin-top: 20px;
+		padding-top: 5px;
+	}
+	main section .columna{
+		width: 100%;
+	}
+}
+/*Fin Responsive*/
