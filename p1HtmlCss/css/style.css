@@ -341,9 +341,31 @@ img {
 		border-bottom: 1px solid gray;
 		margin-top: 20px;
 		padding-top: 5px;
+		padding-bottom: 10px;
 	}
-	main section .columna{
+	.columna{
 		width: 100%;
+		padding-left: 2%;
+	}
+	#columna1 .foto{
+		width: 75%;
+	}
+	#columna1 .cuadrado{
+		width: 82%;
+		border: 4px solid #fa573a;
+		background-color: transparent;
+		bottom: 2%;
+		right: 2%;
+		position: relative;
+		transform: rotateZ(-10deg);
+		margin-bottom: 20px;
+	}
+	#columna1 .cuadrado img{
+		visibility:hidden;
+	}
+	#columna1 .rota:hover .cuadrado{
+		transform: rotateZ(0deg);
+		transition: 1s;
 	}
 }
 /*Fin Responsive*/
