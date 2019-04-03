@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+		//Dado 54321 segundos calcula las horas, minutos y segundos que hay en esa cantidad de segundos dados
+		const num = 54321;
+		var horas, minutos, segundos = 0;
+		
+			segundos = num % 60;
+			minutos = num % 3600;
+			horas = (num - minutos) / 3600;
+
+		console.log('Horas '+ horas + 'Minutos ' + minutos + 'Segundos ' + segundos );
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+		//Dada una cantidad pedida por pantalla, necesito que me calcules el valor a facturar
+		//Si el el IVA  es el 21% calcular el pvp de cualquier valor
+
+		var coniva = 0;
+		var siniva = prompt('Introduce valor sin iva, para cálculo de IVA: ');
+		siniva = parseInt(siniva);
+		coniva = siniva + ((siniva * 21) / 100);
+
+		alert('Con iva ' + coniva);
+
+	</script>
+</body>
+</html>
