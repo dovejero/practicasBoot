@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			width: 100px;
+			height: 100px;
+			margin-bottom: 5px;
+		}
+		.rojo{
+			background-color: red;
+		}
+		.verde{
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+
+	<script>
+		const num = 20;
+		// Pintar 20 cuadrados uno de cada color
+
+		for (var i = 1; i <= num; i++) {
+			if (i%2===0){
+				document.write('<div class="rojo"></div>');
+			} else {
+				document.write('<div class="verde"></div>');
+			}
+		}
+	</script>
+</body>
+</html>

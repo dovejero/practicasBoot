@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejer2</title>
+</head>
+<body>
+
+	<script>
+		
+		// pide nº pantalla y decir si es par o impar
+
+		var num = prompt('Par o Impar');
+
+		if (isNaN(num)){
+			alert('No es un numero')
+		}else{
+			num = parseFloat(num);
+			var parImpar = '';
+			parImpar = (num % 2 === 0)? 'Número Par' : 'Número Impar';
+			alert(parImpar);
+		}
+	</script>
+	
+</body>
+</html>

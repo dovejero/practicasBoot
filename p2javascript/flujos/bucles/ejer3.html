@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			width: 100px;
+			height: 100px;
+			margin-bottom: 5px;
+		}
+		.rojo{
+			background-color: red;
+		}
+		.verde{
+			background-color: green;
+		}
+		.azul{
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+
+
+	<script>
+		// pedir por pantalla cuantas cartas quieres, luego pedir de que color las quieres y tres opciones rojo verde o azul. Sacar el numero de cartas que me pidas del color que lo pidas
+
+		var numCartas = prompt('Cuantas cartas quieres?: ');
+		numCartas = parseInt(numCartas)
+		var color = prompt('Color cartas? rojo, verde, azul: ');
+		// var divColor = '';
+
+		// switch (color){
+		// 	case 'rojo':
+		// 		divColor = '<div class="rojo"></div>'
+		// 	break;
+		// 	case 'verde':
+		// 		divColor = '<div class="verde"></div>'
+		// 	break;
+		// 	case 'azul':
+		// 		divColor = '<div class="azul"></div>'
+		// 	break;
+		// 	default:
+		// 	break;
+		// }
+		for (var i = 1; i <= numCartas; i++) {
+			// document.write(divColor);
+			document.write('<div class="' + color + '"></div>')
+		}
+		
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 1</title>
+</head>
+<body>
+
+	<script>
+
+		//Pedir por pantalla edad y si es mayo dejar acceder y si no no dejar entrar
+		
+		var edad = prompt('Edad DNI');
+		edad = parseInt(edad);
+		const edadCorte = 18;
+		
+		// if (edad < 18) {
+		// 	alert('NO Puedes acceder al local')
+		// } else {
+		// 	alert('Puedes acceder al local')
+		// }
+
+		var acceso = '';
+		acceso = (edad < edadCorte)? 'NO Puedes acceder al local' : 'Puedes acceder al local'
+		alert(acceso)
+
+	</script>
+	
+</body>
+</html>
