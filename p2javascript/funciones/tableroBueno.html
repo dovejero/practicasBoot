@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Tablero de ajedrez</title>
+
+	<style>
+		body{
+			background-color: tomato;
+		}
+		.row:after{
+			content: "";
+			clear: both;
+			display: block;
+			height: 0;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- <div style="background-color: black; width: 100px; height: 100px"></div> -->
+	<script>
+		
+		var tamanoCasilla = parseInt(prompt('Dame un tamaño de casilla'));
+		var cantidadCasillasXfila = parseInt(prompt('Dame numero de casillas por fila'));
+		var color = prompt('Empieza por, black or white');
+		function pintarFila(pTamanoCasilla, pCantidad, miColor)
+		{
+			var fila = "";
+			for(var i = 1; i<= pCantidad; i++)
+			{
+				if(miColor == "white")
+				{
+					var colorCasilla = (i%2 != 0)? 'white' : 'black';
+				}
+				else{
+					var colorCasilla = (i%2 != 0)? 'black' : 'white';
+				}
+				
+	
+					fila += '<div style="background-color: '+colorCasilla+'; width: '+pTamanoCasilla+'px; height: '+pTamanoCasilla+'px; float:left; margin:1px;"></div>' ;
+			}
+			document.write('<div class="row">'+fila+'</div>');
+		}
+		function pintarTablero(pNumeroFilas)
+		{
+			for(var i=1; i<= pNumeroFilas; i++)
+			{
+				if(color == "black")
+				{
+					pintarFila(tamanoCasilla,cantidadCasillasXfila,color);
+					color = "white";
+				}
+				else{
+					pintarFila(tamanoCasilla,cantidadCasillasXfila,color);
+					color =  'black';
+				}
+				
+			}
+		}
+		pintarTablero(cantidadCasillasXfila)
+		
+	</script>
+	
+</body>
+</html>

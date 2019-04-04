@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			background-color: gray;
+		}
+		.flotado{
+			float: left;
+		}
+		.row:after{
+			content: "";
+			clear:both;
+			display: block;
+			height: 0;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		
+		var numCasillas = parseInt(prompt('Introduce nº de casillas deseadas: '));
+		var tamCasillas = parseInt(prompt('Introduce tamaño casillas en px: '));
+
+		function pintarCasillas(pNumCasillas, ptamCasillas, filaPI) {
+			var color = '';
+			var linea = '';
+			for (var i = 1 ; i <= pNumCasillas; i++) {
+				switch(filaPI){
+					case 'par':
+						color = (i%2==0)? 'black' : 'white';
+					break;
+					default:
+						color = (i%2==0)? 'white' : 'black';
+					break;
+				}
+				var psalto = (i==pNumCasillas)? 'row' : 'flotado';
+				document.write('<div class="'+psalto+'" style="background-color: '+ color +'; height: '+ptamCasillas+'px ;width: '+ptamCasillas+'px"></div>')
+			}
+		}
+
+		function pintarFilas(pNumCasillas, ptamCasillas){
+			for (var i = 1 ; i <= pNumCasillas; i++) {
+				var filaPI = (i%2==0)? 'impar' : 'par';
+				pintarCasillas(pNumCasillas, ptamCasillas, filaPI);
+			}
+		}
+		pintarFilas(numCasillas, tamCasillas);
+	</script>
+
+</body>
+</html>
