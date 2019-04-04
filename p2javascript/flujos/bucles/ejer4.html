@@ -5,8 +5,6 @@
 	<title>Document</title>
 	<style>
 		div{
-			width: 100px;
-			height: 100px;
 			margin-bottom: 5px;
 		}
 		.rojo{
@@ -18,16 +16,21 @@
 		.azul{
 			background-color: blue;
 		}
+		.black{
+			background-color: black;
+		}
+
 	</style>
 </head>
 <body>
 
 	<script>
-		// pedir por pantalla cuantas cartas quieres, luego pedir de que color las quieres y tres opciones rojo verde o azul. Sacar el numero de cartas que me pidas del color que lo pidas
+		// pedir por pantalla cuantas cartas quieres, luego pedir de que color las quieres y tres opciones rojo verde o azul. Sacar el numero de cartas que me pidas del color que lo pidas y además pida tamaño para alto y ancho
 
 		var numCartas = prompt('Cuantas cartas quieres?: ');
 		numCartas = parseInt(numCartas)
-		var color = prompt('Color cartas? rojo, verde, azul: ');
+		var color = prompt('Color cartas? rojo, verde, azul: ') // || 'defecto';
+
 		var tam = prompt('Tamaño en pixels: ');
 		tam = parseInt(tam)
 		// var divColor = '';
@@ -43,6 +46,7 @@
 		// 		divColor = '<div class="azul"></div>'
 		// 	break;
 		// 	default:
+		// 		divColor = '<div class="black"></div>'
 		// 	break;
 		// }
 		for (var i = 1; i <= numCartas; i++) {

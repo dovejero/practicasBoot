@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejer1</title>
+</head>
+<body>
+	<script>
+		
+		// Pedir por pantalla una figura de dos posible circulo y cuadrado. Cuando elijas figura pedir, si es cuadrado alto y ancho y si es círculo pedir el radio (funciones básicas y funciones con parámetros)
+
+		
+
+		do{
+			var figura = prompt('Introduce figura. cuadrado, circulo; ');
+		}while(figura != 'circulo' && figura !='cuadrado')
+		
+		switch(figura){
+			case('cuadrado'):
+				fCuadrado();
+			break
+			case('circulo'):
+				fCirculo();
+			break
+			default:
+				alert('Figura no encontrada');
+		}
+
+		function fCuadrado(){
+			var alto = prompt('Introduce alto para el cuadrado; ');
+			var ancho = prompt('Introduce ancho para el cuadrado; ');
+			pintarCuadrado(alto, ancho);
+		}
+		function fCirculo(){
+			var radio = prompt('Introduce radio para el círculo; ');
+			pintarCirculo(radio);
+		}
+		function pintarCirculo(pRadio){
+			document.write('<div style=" background-color: red; width: '+ (pRadio*2) +'px ;height: '+ (pRadio*2) +'px; border-radius: '+pRadio+'px"></div>')
+		}
+		function pintarCuadrado(pAlto, pAncho){
+			document.write('<div style=" background-color: red; width: '+ pAncho +'px ;height: '+ pAlto +'px"></div>')
+		}
+
+	</script>
+</body>
+</html>

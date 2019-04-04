@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>funciones</title>
+	<style>
+		div{
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		//dibujar figura según alto ancho y color
+
+		var alto = 100;
+		var ancho = 100;
+		var color = 'tomato';
+
+		function dibujarFigura(pAlto, pAncho, pColor){
+			var anchito = pAncho;
+			var altito = pAlto;
+			var colorcito = pColor;
+
+			document.write('<div style=" background-color:' + colorcito + '; width: '+ anchito +'px ;height: '+ altito +'px"></div>')
+			document.write('<div style=" background-color:' + pColor + '; width: '+ pAncho +'px ;height: '+ pAlto +'px"></div>')
+
+		}
+
+		dibujarFigura(alto, ancho, color);
+		dibujarFigura(200, 200, 'green');
+
+	</script>
+</body>
+</html>

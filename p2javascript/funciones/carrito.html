@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Carrito</title>
+</head>
+<body>
+		<!-- 	Comprar, cargar productos, estado stock, notificar aviso compra si stock es inferior a 5
+		 -->
+ 	<script>
+ 		
+ 		var stock = prompt('Introduce Stock total: ');
+ 		stock = parseInt(stock);
+
+ 		function devolverStock(){
+ 			// return stock;
+ 			console.log(stock);
+ 		}
+
+ 		function comprarProducto(pNumProductos){
+ 			if(pNumProductos <= stock){
+ 				stock = stock - pNumProductos;
+ 				console.log(notificar());
+ 			}else {
+ 				console.log('No hay suficiente stock nuesto stock es: ' + stock);
+ 			}
+ 		}
+
+ 		function cargarProducto(pNumProductos){
+ 			stock = stock + pNumProductos;
+ 		}
+
+ 		function notificar(){
+ 			// if (stock < 5){
+ 			// 	console.log ('Stock a punto de agotarse. Tienes sólamente ' + stock + ' productos')
+ 			// }
+ 			var aviso = (stock<5) ? 'Stock a punto de agotarse. Tienes sólamente ' + stock + ' productos': ''
+ 			return aviso;
+ 		}
+ 	</script>
+ </body>
+</html>

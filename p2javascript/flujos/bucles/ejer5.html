@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejer5</title>
+</head>
+<body>
+	<script>
+		//pedir número por pantalla y si me das un nº calcúlame su últmo digito. Si se introduce otra cosa volverás a pedir el valor por pantallas hasta que sea un número.
+		
+		do{
+			var num = prompt('Introduce un número y calculo dígito final');
+		}while (isNaN(num));
+
+		alert('ultimo dígito de ' + num + ' es ' + (num%10));
+	</script>
+</body>
+</html>
