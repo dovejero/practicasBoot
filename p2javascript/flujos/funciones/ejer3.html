@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejer3</title>
+</head>
+<body>
+
+	<script>
+		//realizar una función que reciba n números y me cree una cadena de caracteres con sólo los número impares que reciba
+
+		function magic() {
+			var impares = '';
+			for (var i = 0; i < arguments.length; i++) {
+				impares += (arguments[i] % 2 != 0) ? (arguments[i] + ' ') : '';
+			}
+			console.log ('Numeros impares: ' + impares);
+		}
+
+		magic(1, 23, 5, 6, 8, 9, 0, 4, 5, 2, 7);
+
+	</script>
+</body>
+</html>

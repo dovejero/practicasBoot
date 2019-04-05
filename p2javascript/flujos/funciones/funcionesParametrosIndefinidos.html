@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Funciones con parametros indefinidos</title>
+</head>
+<body>
+
+
+	<script>
+		function media() {
+			var concatenar = ''
+			var sumar = 0
+			for (var i = 0; i < arguments.length; i++) {
+				concatenar += arguments[i] + ' ';
+				sumar += arguments[i];
+
+			}
+			console.log('Listado: ' + concatenar);
+			console.log('Suma: ' + sumar);
+		}
+
+		media(2, 4, 5, 8, 9);
+		media(1, 4);
+		media(1, 984, 320, 23, 65);
+
+	</script>
+</body>
+</html>

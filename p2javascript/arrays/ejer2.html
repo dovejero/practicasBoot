@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejer2</title>
+</head>
+<body>
+	<script>
+		var numeroSolicitado = 0;
+		var listaNumsPares = new Array();
+		var listaNumsImpares = new Array();
+		
+		// Pedir N números por pantalla. Se parará de pedir números cuando pongamos la palabra FIN. Todos esos números se almacenarán en un listado para posteriormente sacarme escrito en el HTML el listado de pares y de impares.
+
+		do{
+			numeroSolicitado = prompt('Introduce números hasta que introduzcas FIN: ');
+			if (numeroSolicitado % 2== 0){
+				listaNumsPares[listaNumsPares.length] = numeroSolicitado;
+			}else if (numeroSolicitado != 'FIN'){
+				listaNumsImpares[listaNumsImpares.length] = numeroSolicitado;
+			}
+		}while(numeroSolicitado != 'FIN')
+
+		function pintar(pListado, parImpar){
+
+			var listadoFormateado = '';
+			for (var i = 0; i < pListado.length; i++) {
+				listadoFormateado += '<li>'+pListado[i]+'</li>'
+			}
+			document.write('<p> Lista números '+ parImpar + '</p>')
+			document.write('<ul>'+listadoFormateado+'</ul>');
+		}
+
+		pintar(listaNumsPares, 'Pares');
+		pintar(listaNumsImpares, 'Impares');
+	</script>
+</body>
+</html>

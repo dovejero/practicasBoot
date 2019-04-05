@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>arrays</title>
+</head>
+<body>
+	
+	<script>
+		
+		var listaAlumnos = new Array();
+		var listadoFormateado = '';
+		listaAlumnos = ['Rocio', 'Javier', 'Victor', 'Ruben']; //var listaAlumnos = new Array('Rocio', 'Javier', 'Victor', 'Ruben');
+
+		for (var i = 0 ; i < listaAlumnos.length; i++) {
+			listadoFormateado += '<li>'+listaAlumnos[i]+'</li>';
+		}
+		document.write('<ul>'+listadoFormateado+'</ul>');
+	</script>
+</body>
+</html>
