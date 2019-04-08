@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Array Multidimensional Asociativo</title>
+	<style>
+		.ficha{
+			background-color: lightgray;
+			padding: 10px;
+			width: 31%;
+			border: 1px solid black;
+			text-align: center;
+			float: left;
+			margin: 1%;
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+<!-- 	<div class="ficha">
+		<h2>Nombre y apellido alumno</h2>
+		<h3>Datos del alumno:</h3>
+		<ul>
+			<li>Edad: edad</li>
+			<li>Nota: nota</li>
+		</ul>
+	</div> -->
+	<script>
+		var listaAlumnos = new Array();
+		var alumno1 = {nombre: 'Javier', apellido: 'Arroyo', edad: 28, nota: 8}
+		var alumno2 = {nombre: 'Rocio', apellido: 'Molero', edad: 27, nota: 5}
+		var alumno3 = {nombre: 'Victor', apellido: 'Soriano', edad: 36, nota: 3}
+		var alumno4 = {nombre: 'David', apellido: 'Ovejero', edad: 37, nota: 0}
+		var alumno5 = {nombre: 'Esteban', apellido: 'Bennett', edad: 31, nota: 9}
+		var alumno6 = {nombre: 'Raquel', apellido: 'García', edad: 35, nota: 6}
+		var alumno7 = {nombre: 'Alba', apellido: 'Santiago', edad: 27, nota: 5}
+		var alumno8 = {nombre: 'Ruben', apellido: 'García', edad: 32, nota: 2}
+		listaAlumnos = [alumno1, alumno2, alumno3, alumno4, alumno5, alumno6, alumno7, alumno8]
+		// console.log(listaAlumnos);
+
+		function pintarFicha(pListaAlumnos){
+			for (var i = 0; i <pListaAlumnos.length; i++) {
+				var contenido = '<div class="ficha">';
+				contenido += '<h2>'+pListaAlumnos[i].nombre+'</h2><h3>Datos del alumno:</h3><ul><li>Edad: '+pListaAlumnos[i].edad+'</li><li>Nota: '+pListaAlumnos[i].nota+'</li></ul>';
+				contenido += '</div>';
+				document.write(contenido);
+			}
+		}
+		function filtrarEdad(pLista, pEdad){
+			var nuevaLista = new Array();
+			for (var i = 0; i <pLista.length; i++) {
+				if (pLista[i].edad <= pEdad){
+					nuevaLista[nuevaLista.length]=pLista[i];
+					// nuevaLista.push(pLista[i]);
+				}
+			}
+			return nuevaLista;
+		}
+		function filtrarAprobados(pLista, pAprobados){
+			var nuevaLista = new Array();
+			for (var i = 0; i <pLista.length; i++) {
+				if (pLista[i].nota >= pAprobados){
+					nuevaLista[nuevaLista.length]=pLista[i];
+				}
+			}
+			return nuevaLista;
+		}
+		// const filtroEdad = 30;
+		// pintarFicha(filtrarEdad(listaAlumnos, filtroEdad))
+		const filtroAprobados = 5;
+		pintarFicha(filtrarAprobados(listaAlumnos, filtroAprobados))
+
+	</script>
+</body>
+</html>

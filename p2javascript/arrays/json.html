@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>objetos Json</title>
+</head>
+<body>
+	<script>
+		// var producto = new Object()   No se declara ya que sería reiterativo
+
+		var producto = {
+			'titulo': 'Camiseta',
+			'precio': 54.90,
+			'codigo': 'A12345',
+			'estado': true,
+			'talla': {'s': 12, 'm': 3, 'l': 1, 'xl': 0}
+		}
+		console.log(producto);
+
+		// Terminología de corchete
+
+				console.log(producto['precio']);
+
+		// Terminología de punto. Es la que se utiliza en los objetos. objeto.propiedad o atributo
+
+		console.log(producto.titulo);
+
+		for (var clave in producto){
+			console.log(clave + ' ' + producto[clave]);
+		}
+	</script>
+</body>
+</html>

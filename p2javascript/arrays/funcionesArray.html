@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Funciones Array</title>
+</head>
+<body>
+	<script>
+		var listaAnimales = new Array('León', 'Perro', 'Gato', 'Cocodrilo','Canario');
+		//PUSH añade un elemento en la última posición disponible en mi array
+		listaAnimales.push('Periquito');
+
+		//UNSHIFT añade un elemento en la primera posición disponible en mi array
+		listaAnimales.unshift('Canguro');
+
+
+		//POP elimina elemento del final del array y te lo devuelve
+		console.log(listaAnimales.pop());
+
+		//SHIFT elimina elemento del principio del array y te lo devuelve
+		console.log(listaAnimales.shift());
+
+		//REVERSE invierte el array (ojo: modificándolo)
+		var invertido = listaAnimales.reverse();
+		listaAnimales.reverse();
+
+		//SLICE selecciona elementos en el array desde punto inicial hasta final
+		//var animalesDomesticos = listaAnimales.slice(1,-2);
+		//console.log('Animales domésticos: ', animalesDomesticos);
+
+		//SPLICE elimina desde el primer parámetro el nº de elementos indicados en el segundo parámetro
+
+		listaAnimales.splice(1, 2)
+
+			//añade parametro desde la posición 2
+			listaAnimales.splice(2, 0, 'Caballo')
+	
+
+		//CONCAT concatena dos arrays
+		var listaAnimales2 = new Array('Rinoceronte', 'Hipopotamo', 'Elefante');
+		listaAnimales.concat(listaAnimales2);
+
+				console.log(listaAnimales);
+	</script>
+</body>
+</html>
+
+
+
+

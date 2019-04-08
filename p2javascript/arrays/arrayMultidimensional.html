@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Multidimensional</title>
+</head>
+<body>
+	<script>
+		// array de array es Multidimensional
+		var zoo = new Array();
+		var aves = new Array('Aguila', 'Guacamayo', 'Lechuza', 'Colibrí');
+		var felinos = new Array('León', 'Tigre', 'Pantera');
+		var anfibios = new Array('Hipopótamo', 'Rana', 'Cocodrilo');
+
+		zoo = [aves, felinos, anfibios];
+		// console.log(zoo);
+
+		// Pintar en el html los listados del zoo por separado con sus títulos.
+		console.log(zoo.length);
+		var Eanimal = '';
+		for (var i = 0; i < zoo.length; i++) {
+			// switch(i){
+			// 	case 0:
+			// 		Eanimal = 'Aves'
+			// 		break;
+			// 	case 1:
+			// 		Eanimal = 'Felinos'
+			// 		break;
+			// 	case 2:
+			// 		Eanimal = 'Anfibios'
+			// 		break;
+			// }
+			// pintar(zoo[i], Eanimal);
+			var arrayEspecies = ['Aves', 'Felinos', 'Anfibios'];
+			pintar(zoo[i], arrayEspecies[i]);
+		}
+
+		function pintar(animales, especie){
+			document.write('<p>'+ especie +'</p>');
+			for (var j = 0; j < animales.length; j++) {
+				document.write('<ul><li>'+ animales[j] +'</li></ul>');
+			}
+		}
+
+		// pintar(['a', 'b', 'c'], 'Letras')
+		// pintar(aves, 'Aves');
+	</script>
+</body>
+</html>
