@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejer7</title>
+</head>
+<body>
+	<script>
+		function comprobarCadena(pCadena){
+			var mayusculas = pCadena.toUpperCase();
+			var minusculas = pCadena.toLowerCase();
+			var resulCadena = '';
+			switch(pCadena){
+				case mayusculas:
+					resulCadena = 'Mayúsculas'
+					break;
+				case minusculas:
+					resulCadena = 'Minúsculas'
+					break;
+				default:
+					resulCadena = 'Ambas'
+					break;
+			}
+			return resulCadena;
+			// localeCompare
+		}
+	</script>
+</body>
+</html>
