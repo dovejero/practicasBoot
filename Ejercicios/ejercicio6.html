@@ -6,7 +6,7 @@
 </head>
 <body>
 	<script>
-		var valores = ['buenas tardes', 5, 7, 'hola', 'adios', 2];
+		var valores = ['buenas tardes', 5, 7, 'hola', 'adios', 2, 'asdfasdfasdfasdf'];
 		var aStrings = new Array();
 		var aNumeros = new Array();
 		for(var j = 0 ; j < valores.length; j++){
@@ -26,15 +26,14 @@
 		}
 
 		function contString(pStrings){
-			var palabra = new Array();
-			palabra = [0,0];
+			var palabra = [0,0];
 			for(var i = 0 ; i < pStrings.length; i++){
 				if (pStrings[i].length > palabra[0]){
-					palabra[0] = pStrings[i];
-					palabra[1] = i;
+					palabra[1] = pStrings[i];
+					palabra[0] = pStrings[i].length;
 				}
 			}
-			console.log ('Palabra "' + palabra[0] + '" es la mayor y tiene ' + palabra[0].length + ' digitos')
+			console.log ('Palabra "' + palabra[1] + '" es la mayor y tiene ' + palabra[0] + ' digitos')
 		}
 	</script>
 </body>
