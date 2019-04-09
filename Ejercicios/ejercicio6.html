@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejer6</title>
+</head>
+<body>
+	<script>
+		var valores = ['buenas tardes', 5, 7, 'hola', 'adios', 2];
+		var aStrings = new Array();
+		var aNumeros = new Array();
+		for(var j = 0 ; j < valores.length; j++){
+			typeof(valores[j]) === 'number'? aNumeros.push(valores[j]) : aStrings.push(valores[j]);
+		}
+		// console.log('Strings: ', aStrings);
+		// console.log('Numeros: ', aNumeros);
+		multiplica(aNumeros);
+		contString(aStrings);
+
+		function multiplica(pNumeros){
+			var multiplica = 1;
+			for(var i = 0 ; i < pNumeros.length; i++){
+				multiplica = multiplica * pNumeros[i];
+			}
+			console.log('La multiplicación de los números: ' + pNumeros + ' es ' + multiplica)
+		}
+
+		function contString(pStrings){
+			var palabra = new Array();
+			palabra = [0,0];
+			for(var i = 0 ; i < pStrings.length; i++){
+				if (pStrings[i].length > palabra[0]){
+					palabra[0] = pStrings[i];
+					palabra[1] = i;
+				}
+			}
+			console.log ('Palabra "' + palabra[0] + '" es la mayor y tiene ' + palabra[0].length + ' digitos')
+		}
+	</script>
+</body>
+</html>
