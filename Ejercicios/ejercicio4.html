@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejer4</title>
+</head>
+<body>
+	<script>
+		var listaNumeros = new Array();
+		do{
+			var numero = prompt('Introduce números (Acaba con 0): ');
+			numero!=0? listaNumeros.push(numero) : '';
+		}while(isNaN(numero) || numero != 0)
+
+			document.write('<p> Lista de números ' + listaNumeros + '</p>');
+	</script>
+</body>
+</html>
