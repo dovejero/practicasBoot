@@ -29,8 +29,8 @@
 			var palabra = [0,0];
 			for(var i = 0 ; i < pStrings.length; i++){
 				if (pStrings[i].length > palabra[0]){
-					palabra[1] = pStrings[i];
 					palabra[0] = pStrings[i].length;
+					palabra[1] = pStrings[i];
 				}
 			}
 			console.log ('Palabra "' + palabra[1] + '" es la mayor y tiene ' + palabra[0] + ' digitos')
