@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejer5</title>
+</head>
+<body>
+	<script>
+		do{
+			var numero = prompt('Introduce número para saber si es primo ');
+		}while(isNaN(numero))
+
+		document.write('<p> El número ' + numero + ' es primo? ' + esPrimo(numero) + '</p>');
+		
+		// function esPrimo(pNumero){
+		// 	var primo = false;
+		// 	var contador = 0;
+		// 	for (var i = 1; i <= 6; i++) {
+		// 		if (contador > 2){
+		// 			primo = false;
+		// 			break;
+		// 		}else{
+		// 			(pNumero % i == 0) ? contador++ : '';
+		// 			primo = true;
+		// 		}
+		// 	}
+		// 	return primo;
+		// }
+
+		function esPrimo(pNumero){
+			var primo = true;
+
+			if (pNumero != 2 && pNumero != 3 && pNumero != 5) {
+
+				if (pNumero % 2 == 0 || pNumero % 3 == 0 || pNumero % 5 == 0) {
+					primo = false;
+				}
+			}
+			return primo;
+		}
+
+	</script>
+</body>
+</html>
