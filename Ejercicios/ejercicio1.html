@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejer1</title>
+</head>
+<body>
+	<script>
+		function sumar(){
+			var suma = 0;
+			var aSuma = new Array();
+			for (var i = 0; i <arguments.length; i++) {
+				if (!isNaN(arguments[i])){
+					suma += arguments[i];
+					aSuma.push(arguments[i]);
+				} else {
+					console.log(arguments[i] + ' no es un número');
+				}
+				// (!isNaN(arguments[i]))? suma += arguments[i] : 0;
+			}
+			document.write('<p>La suma de ' +aSuma+ ' es: ' + suma + '</p>');
+		}
+		function restar(){
+			var resta;
+			var aResta = new Array();
+			for (var i = 0; i <arguments.length; i++) {
+				if (!isNaN(arguments[i])){
+					(i==0)? resta = arguments[i] : resta -= arguments[i];
+					aResta.push(arguments[i]);
+				} else {
+					console.log(arguments[i] + ' no es un número');
+				}
+			}
+			document.write('<p>La resta de ' +aResta+ ' es: ' + resta + '</p>');
+		}
+
+		function multiplicar(){
+			var multiplica = 1;
+			var aMultiplica = new Array();
+			for (var i = 0; i <arguments.length; i++) {
+				if (!isNaN(arguments[i])){
+					multiplica = multiplica * arguments[i];
+					aMultiplica.push(arguments[i]);
+				} else {
+					console.log(arguments[i] + ' no es un número');
+				}
+			}
+			document.write('<p>La multiplicación de ' +aMultiplica+ ' es: ' + multiplica + '</p>');
+		}
+		function dividir(){
+			var divide;
+			var aDivide = new Array();
+			(arguments.length>2)? document.write('<p>La división sólo acepta 2 parámetros cogemos ' + arguments[0] + ' y ' + arguments[1]): ''
+			for (var i = 0; i < 2; i++) {
+				if (!isNaN(arguments[i])){
+					(i==0)? divide = arguments[i] : divide = divide / arguments[i];
+					aDivide.push(arguments[i]);
+				} else {
+					console.log(arguments[i] + ' no es un número');
+				}
+			}
+			document.write('<p>La división de ' +aDivide+ ' es: ' + divide + '</p>');
+		}
+		function elevar(){
+			var eleva;
+			var aEleva = new Array();
+			(arguments.length>2)? document.write('<p>La potencia sólo acepta 2 parámetros cogemos ' + arguments[0] + ' y ' + arguments[1]): ''
+			for (var i = 0; i < 2; i++) {
+				if (!isNaN(arguments[i])){
+					(i==0)? eleva = arguments[i] : eleva = eleva ** arguments[i];
+					aEleva.push(arguments[i]);
+				} else {
+					console.log(arguments[i] + ' no es un número');
+				}
+			}
+			document.write('<p>La potencia de ' +aEleva+ ' es: ' + eleva + '</p>');
+		}
+
+	</script>
+</body>
+</html>
