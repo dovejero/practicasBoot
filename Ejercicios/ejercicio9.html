@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejer 9</title>
+</head>
+<body>
+	<script>
+		function sonCero(){
+			var contador = 0;
+			for (var i = 0; i < arguments.length; i++) {
+				arguments[i] == 0? contador++ : '';
+			}
+			todasCero = (contador == 3) ? true : false;
+			return todasCero;
+		}
+
+		function sonPositivos(){
+			var contador = 0;
+			for (var i = 0; i < arguments.length; i++) {
+				arguments[i] > 0? contador++ : '';
+			}
+			todosPositivos = (contador == 3) ? true : false;
+			return todosPositivos;
+		}
+
+		function sonMismoSigno(){
+			var contadorPositivo = 0;
+			var contadorNegativo = 0;
+			for (var i = 0; i < arguments.length; i++) {
+				arguments[i] > 0? contadorPositivo++ : '';
+				arguments[i] < 0? contadorNegativo++ : '';
+			}
+			todosMismoSigno = (contadorPositivo == 3 || contadorNegativo == 3) ? true : false;
+			return todosMismoSigno;
+		}
+
+		function sonValoresDistintos(){
+			var contador = 0;
+			for (var i = 0; i < arguments.length; i++) {
+				for (var j = i + 1; j < arguments.length; j++) {
+					arguments[i] == arguments[j]? contador++ : '';
+				}
+			}
+			todosValDis = (contador == 0) ? true : false;
+			return todosValDis;
+		}
+
+		function sonDosValoresCoinciden(){
+			var contador = 0;
+			for (var i = 0; i < arguments.length; i++) {
+				for (var j = i + 1; j < arguments.length; j++) {
+					arguments[i] == arguments[j]? contador++ : '';
+				}
+			}
+			soloDos = (contador >= 1) ? true : false;
+			return soloDos;
+		}
+
+		function sonDosMaxCoinciden(){
+			var contador = 0;
+			for (var i = 0; i < arguments.length; i++) {
+				for (var j = i + 1; j < arguments.length; j++) {
+					arguments[i] == arguments[j]? contador++ : '';
+				}
+			}
+			soloDosMax = (contador > 0 && contador == 1) ? true : false;
+			return soloDosMax;
+		}
+
+		function v2ComprenEntreV1(){
+			var resultado = true
+			if (arguments[0] < arguments[1] && arguments[1] < arguments[2]){
+				resultado = true;
+			} else {
+				resultado = false;
+			}
+			return resultado;
+		}
+
+	</script>
+</body>
+</html>
