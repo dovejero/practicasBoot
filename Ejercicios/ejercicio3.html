@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejer2</title>
+</head>
+<body>
+	<script>
+		do{
+			var numero = prompt('Introduce número para sacar factorial: ');
+		}while(isNaN(numero))
+
+		Factorial(numero);
+
+		function Factorial(pNumero){
+			var aFactorial = ''
+			var resultado = pNumero;
+			for (var i = pNumero -1; i >= 1; i--) {
+				(i == pNumero - 1)? aFactorial+= (pNumero + ' X ' + i) :aFactorial+=(' X ' + i);
+				resultado = resultado * i;
+			}
+			document.write('<p> El factorial de '+pNumero+' es ' + aFactorial + ' = ' + resultado + '</p>');
+		}
+	</script>
+</body>
+</html>
