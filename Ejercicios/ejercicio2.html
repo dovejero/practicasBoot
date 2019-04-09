@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejer2</title>
+</head>
+<body>
+	<script>
+		do{
+			var numero = prompt('Introduce número para sacar sus 10 primeros múltiplos: ');
+		}while(isNaN(numero))
+
+		document.write('<p> Los múltiplos de '+numero+' son ' + multiplos(numero) + '</p>');
+
+		function multiplos(pNumero){
+			var aMultiplos = new Array();
+			for (var i = 1; i <= 10; i++) {
+				aMultiplos.push(pNumero * i);
+			}
+			return aMultiplos;
+		}
+	</script>
+</body>
+</html>
