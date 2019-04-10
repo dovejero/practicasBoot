@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejer 10</title>
+</head>
+<body>
+	<script>
+		function ordenar(){
+			var lisOrdenadaUp = new Array();
+			var copiaArray = new Array();
+			
+			for (var i = 0; i < arguments.length; i++) {
+   				copiaArray.push(arguments[i]);
+			}
+			
+			for (var i = 0; i < arguments.length; i++) {
+				console.log('entra2');
+				var mayor = 0;
+				for (var j = 0; j < copiaArray.length; j++) {
+					if (copiaArray[j] > mayor){
+						mayor = copiaArray[j];
+						var posicion = j;
+					}
+				}
+				lisOrdenadaUp[i] = mayor; 
+				copiaArray.splice(posicion, 1);
+			}
+			console.log(lisOrdenadaUp)
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejercicio 13</title>
+</head>
+<body>
+	<script>
+		var datos = new Array();
+		var array = new Array('nombre', 'apellido', 'ciudad')
+		for (var i = 0; i < 3; i++ ){
+			var interruptor = 0;
+			do{
+				var dato = prompt('Introduce ' + array[i]) 
+				console.log(dato)
+				if (dato != '' && dato != null) {
+					datos[i] = dato
+					interruptor = 1;
+				}
+			}while(interruptor == 0)
+		}
+		pintarDatos(datos);
+
+		function pintarDatos(pDatos){
+			document.write(pDatos[0] + ' ' + pDatos[1] + ' vive en ' + pDatos[2]);
+		}
+	</script>
+</body>
+</html>
