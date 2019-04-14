@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM por class Name</title>
+</head>
+<body>
+
+
+	<img class="imagen" src="https://estaticos.muyinteresante.es/media/cache/760x570_thumb/uploads/images/article/5c3871215bafe83b078adbe3/perro.jpg" >
+
+	<img class="imagen" src="https://www.fundacion-affinity.org/sites/default/files/el-gato-necesita-tener-acceso-al-exterior.jpg" >
+
+	<img src="https://www.fundacion-affinity.org/sites/default/files/el-gato-necesita-tener-acceso-al-exterior.jpg" >
+
+	<script>
+		
+		var imagenes = document.getElementsByClassName('imagen');
+		console.log(imagenes);
+		imagenes[0].src = "https://www.ecestaticos.com/image/clipping/992/558/43e9ea8fb733b4d467dacc81724a3dae/radiografia-de-la-columna-vertebral-del-real-madrid-los-5-casos-de-por-que-se-hace-vieja.jpg";
+		imagenes[0].alt = "Juan";
+		imagenes[0].style.width = "200px";
+	
+	</script>
+	
+</body>
+</html>

@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>dom 2</title>
+	<title>listado</title>
 </head>
 <body>
+
+	<ul id="menu"></ul>
+
+	<ul id="otromenu"></ul>
+
+
+	<script>
+		
+		//opcion 1
+		var menu = document.getElementById('menu');
+		var listaSecciones = ['Inicio','Quienes Somos','Galeria','Pepe'];
+		for(var i = 0; i<listaSecciones.length; i++)
+		{
+			menu.innerHTML += '<li>'+listaSecciones[i]+'</li>';
+		}
+		//opcion 2:
+		var otromenu = document.getElementById('otromenu');
+		var otralistaSecciones = ['Home','About us','Gallery','Contact'];
+		for(seccion of otralistaSecciones){
+			otromenu.innerHTML += '<li>'+seccion+'</li>'
+		}
+	</script>
 	
 </body>
 </html>

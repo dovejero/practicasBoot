@@ -1,16 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>dom1</title>
+	<title>DOM 1</title>
+
 </head>
 <body>
-	<p>Juan</p>
-	<p>Javier</p>
-	<p>Rocio</p>
+	
+
+
+	<p><span>Juan</span><img src="" alt=""></p>
+	<p><div>asdf</div></p>
+	<p>asdf</p>
+
+
+	
 
 	<script>
 		
+		var parrafos = document.getElementsByTagName('p');
+		console.log(parrafos);
+		parrafos[1].innerHTML = '<div><h2>Titulo</h2><p>hola</p></div>';
+		console.log(parrafos[1].innerText);
+		parrafos[0].innerHTML = '<strong>mundo</strong>'
+		//outerHTML me devuelve el html completo con las etiquetas del propio elemento incluidas.
+		//innerHTMl me devuelve el html de dentro del elemento concreto pero nos las etiquetas del propio elemento
+		//innerText en esta caso solo me devuelve el texto quitando cualquier posible etiqueta del html
 	</script>
 	
 </body>
