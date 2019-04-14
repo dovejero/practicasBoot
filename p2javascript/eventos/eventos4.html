@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Mueve la pelotita</title>
+	<style>
+		#pelota{
+			width: 100px;
+			height: 100px;
+			background-color: tomato;
+			position: relative;
+			border-radius: 50%;
+		}
+		
+	</style>
+</head>
+<body>
+
+		<button type="button">Izquierda</button>
+		<button type="button">Arriba</button>
+		<button type="button">Abajo</button>
+		<button type="button">Derecha</button>
+		<button type="button">Disparo</button>
+
+		
+		<div id="pelota"></div>
+
+
+		<script>
+			var botones = document.querySelectorAll('button');
+			var pelota = document.querySelector('#pelota');
+			var movimientoX = 0;
+			var movimientoY = 0;
+			var movimientobala;
+			for(boton of botones)
+			{
+				boton.addEventListener('click', mover);
+			}
+			function mover(e){
+		
+				switch(e.target.innerText){
+					case "Izquierda":
+						movimientoX -= 10;
+						pelota.style.left = movimientoX + "px";
+					break;
+					case "Derecha":
+						movimientoX += 10;
+						pelota.style.left = movimientoX + "px";
+					break;
+					case "Arriba":
+						movimientoY -= 10;
+						pelota.style.top = movimientoY + "px";
+					break;
+					case "Abajo":
+						movimientoY += 10;
+						pelota.style.top = movimientoY + "px";
+					break;
+					case "Disparo":
+						disparar();
+					break;
+				}
+			}
+			function disparar(){
+				
+				var bala = document.createElement('div');
+				bala.className = "bala";
+			
+				var xdisparo = pelota.offsetLeft + pelota.clientWidth;
+				var ydisparo = pelota.offsetTop + (pelota.clientHeight / 2) - 5; //(seria la mitad de la altura de la bala)
+				console.log(pelota);
+				bala.setAttribute('style','width: 20px; height:10px; background-color: yellow; border: 2px solid black; position: absolute; top: '+ydisparo+'px; left: '+xdisparo+'px');
+				document.body.appendChild(bala);
+				movimientobala = setInterval(function(){
+					xdisparo+=10
+					bala.style.left = xdisparo +"px";
+				}, 500);
+			}
+			
+			
+		</script>
+</body>
+</html>
