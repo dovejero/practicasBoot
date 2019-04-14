@@ -40,7 +40,30 @@
 		var listaAnimales2 = new Array('Rinoceronte', 'Hipopotamo', 'Elefante');
 		listaAnimales.concat(listaAnimales2);
 
-		console.log(listaAnimales);
+		//SORT Te ordena los elementos de un array según el patrón que le definas
+
+		var listaAnimales3 = new Array('Rinoceronte', 'Hipopotamo', 'Elefante', 'Mono');
+		var listaOrdenada = listaAnimales3.sort();
+		console.log(listaAnimales3);
+		var nota = new Array(2, 10, 1, 5, 3);
+		console.log(nota);
+		var notasss = nota.sort(function(a, b){
+			return a-b;
+		})
+
+		//INDEXOF Busca cualquier elemento (cuidado con las mayúsculas) que le metamos a indexOf entre los paréntesis, sólo busca de uno en uno y me devuelve el índice o posición en el array. Si no encuentra nada devuelve -1
+		
+		var listaAnimales4 = new Array('Rinoceronte', 'Hipopotamo', 'Elefante', 'Mono');
+
+		console.log('Hipopotamo está en la posición ' + listaAnimales2.indexOf('Hipopotamo') + ' del array')
+
+		//FILTER 
+		var notaF = new Array(2, 10, 1, 5, 3);
+		var notaFiltrada = notaF.filter(function(a){
+			return a<5;
+		})
+		console.log(notaFiltrada);
+		console.log(notaF);
 	</script>
 </body>
 </html>

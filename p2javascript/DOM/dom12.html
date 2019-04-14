@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dom 12</title>
+
+	<style>
+		
+		.seccion{
+			max-width: 900px;
+			margin: 0 auto;
+/*			background-color: green;*/
+		}
+	</style>
+</head>
+<body>
+
+	<div id="wrapper">
+		<section>
+			<h2>Fichas con enlaces</h2>
+			<article>
+				<img src="" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, explicabo! Sequi, error, quos! Dolore omnis, dicta eum necessitatibus hic ut enim accusantium voluptatem, consequuntur molestiae neque nam, fugiat quas nulla!</p>
+			</article>
+			<article>
+				<img src="" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, explicabo! Sequi, error, quos! Dolore omnis, dicta eum necessitatibus hic ut enim accusantium voluptatem, consequuntur molestiae neque nam, fugiat quas nulla!</p>
+			</article>
+			<article>
+				<img src="" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, explicabo! Sequi, error, quos! Dolore omnis, dicta eum necessitatibus hic ut enim accusantium voluptatem, consequuntur molestiae neque nam, fugiat quas nulla!</p>
+			</article>
+			<article>
+				<img src="" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, explicabo! Sequi, error, quos! Dolore omnis, dicta eum necessitatibus hic ut enim accusantium voluptatem, consequuntur molestiae neque nam, fugiat quas nulla!</p>
+			</article>
+			<article>
+				<img src="" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, explicabo! Sequi, error, quos! Dolore omnis, dicta eum necessitatibus hic ut enim accusantium voluptatem, consequuntur molestiae neque nam, fugiat quas nulla!</p>
+			</article>
+		</section>
+	</div>
+<!-- 	<script>
+
+		document.body.style.backgroundColor = 'tomato';
+		var seccion = document.getElementsByTagName('section');
+		seccion[0].setAttribute('class', 'seccion');
+
+		var articulos = seccion[0].getElementsByTagName('article');
+		seccion[0].style.display = 'flex';
+		seccion[0].style.flexWrap= 'wrap';
+		var imgs = seccion[0].querySelectorAll('img');
+		var i = 0;
+		var j = 1;
+		for(articulo of articulos){
+			articulo.style.heigth = '50%';
+			articulo.style.width = '50%';
+			imgs[i].src ='images2/image' + j +'.jpg'
+			console.log('images2/image' + j +'.jpg');
+			i++;
+			j++;
+		}
+
+	</script> -->
+
+		<script>
+
+		document.body.style.backgroundColor = 'tomato';
+		var seccion = document.getElementsByTagName('section');
+		seccion[0].setAttribute('class', 'seccion');
+
+		var articulos = seccion[0].getElementsByTagName('article');
+		// seccion[0].style.display = 'flex';
+		// seccion[0].style.flexWrap= 'wrap';
+
+		console.log(imgs);
+		var i = 1;
+		for(articulo of articulos){
+			// articulo.style.heigth = '50%';
+			// articulo.style.width = '50%';
+			articulo.setAttribute('style', 'float: left; height: auto; width: 40%; background-color: white; margin: 4%; border: 1px solid black; text-align: center; box-sizing: border-box; padding: 4px')
+			var imgs = articulo.querySelector('img');
+			imgs.src ='images2/image' + i +'.jpg'
+			console.log('images2/image' + i +'.jpg');
+			var enlace = document.createElement('a');
+			enlace.href = 'articulo'+ i + '.html';
+			var texto = document.createTextNode('Leer más...');
+			enlace.appendChild(texto);
+			// articulo.appendChild(enlace);
+			var parrafo = articulo.querySelector('p');
+			articulo.insertBefore(enlace, parrafo);
+			var boton = document.createElement('button');
+			boton.innerText = 'boton '+ i;
+			articulo.appendChild(boton);
+			i++;
+
+		}
+
+	</script>
+</body>
+</html>

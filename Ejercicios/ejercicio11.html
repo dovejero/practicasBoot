@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejercicio 11</title>
+</head>
+<body>
+	<script>
+		var	contador = 0;
+		var menu = new Array();
+		var factura = 0;
+		var carta = {
+			primeros: {
+			    1: {
+			      plato: "Ensalada",
+			      precio: 6
+			    },
+			    2: {
+			      plato: "Sopa",
+			      precio: 7
+			    },
+			    3: {
+			      plato: "Crema",
+			      precio: 7
+			    }
+  			},
+  			segundos: {
+			   	1: {
+			      plato: "Pollo",
+			      precio: 8
+			    },
+			    2: {
+			      plato: "Lubina",
+			      precio: 12
+			    },
+			    3: {
+			      plato: "Ternera",
+			      precio: 10
+			    }
+  			},
+  			postres: {
+			    1: {
+			      plato: "Natillas",
+			      precio: 3
+			    },
+			   	2: {
+			      plato: "Flan",
+			      precio: 4
+			    },
+			    3: {
+			      plato: "Helado",
+			      precio: 2
+			    }
+  			}
+		}
+
+		for(pElegido in carta){
+			pedido(pElegido);
+		}
+
+		function pedido(pCarta){
+			contador ++;
+			console.log(pCarta);
+
+			var numero  = prompt('Elige plato: 1) ' + carta[pCarta][1].plato + ', 2) ' + carta[pCarta][2].plato +  ', 3) ' + carta[pCarta][3].plato)
+			menu.push(numero);
+			factura = parseInt(factura);
+			(numero != '')? factura += carta[pCarta][numero].precio : '';
+			if (contador == 3){
+				var pagado = prompt('Importe pagado: ')
+				pagado = parseInt(pagado);
+				console.log('Pagado: ' + pagado)
+				console.log('Factura: ' + factura)
+				alert('La vuelta es de ' + (pagado - factura));
+			}
+			console.log(menu);
+
+		}
+	</script>
+</body>
+</html>

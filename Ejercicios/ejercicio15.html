@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejer 15</title>
+</head>
+<body>
+	<script>
+		function palindromo(pPalindromo){
+			pPalindromo = pPalindromo.toUpperCase();
+			pPalindromo = pPalindromo.replace(/ /g, '');
+			// console.log(pPalindromo);
+			var esPalindromo = false;
+			for (var i = 0; i < pPalindromo.length; i++) {
+				var anterior = pPalindromo.length - 1;
+				if (pPalindromo[i] != pPalindromo[anterior - i]){
+					// console.log(pPalindromo[i], pPalindromo[anterior - i])
+					break;
+				} else if(i == parseInt(pPalindromo.length/2) ){
+					esPalindromo = true
+				}
+			}
+			console.log('Es palindromo? ', esPalindromo);
+		}
+	</script>
+</body>
+</html>

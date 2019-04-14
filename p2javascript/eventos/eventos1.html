@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>eventos 1</title>
+</head>
+<body>
+	<ul>
+		<li data-color='blue' id='blue' onclick="cambiarColor(this.dataset.color)" >Azul</li>
+		<li data-color='green' id='green' onclick="cambiarColor(this.dataset.color)">Verde</li>
+		<li data-color='yellow' id='yellow' onclick="cambiarColor(this.dataset.color)">Amarillo</li>
+	</ul>
+	
+	<script>
+		function cambiarColor(color){
+			// alert ('Cambiando...');
+			document.body.style.backgroundColor = color;
+		}
+	</script>
+</body>
+</html>

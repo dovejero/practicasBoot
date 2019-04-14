@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>eventos 3</title>
+	<style>
+		#cajaCirculo{
+			width: 40vh;
+			height: 40vh;
+		}
+		#circulo{
+			background-color: red;
+			width: 20%;
+			height: 20%;
+			border: 2px solid black;
+			border-radius: 50%;
+			position: absolute;
+			top: 1px;
+			left: 1px;    
+/*			z-index: -1;*/
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div id="cajaCirculo">
+			<div id="circulo"></div>
+		</div>
+		<div id="cajaBotones">
+			<button id='up' onclick="subirPelota()">up</button>
+			<button id='left'>left</button>
+			<button id='down' onclick="bajarPelota()">down</button>
+			<button id='right'>right</button>
+		</div>
+	</div>
+
+	<script>
+		var cajaPelota = document.getElementById('cajaCirculo');
+		var botonleft = document.getElementById('left');
+		var botonright = document.getElementById('right');
+		botonleft.addEventListener('click', izqPelota);
+		botonright.addEventListener('click', dchaPelota);
+		var pelotita = document.getElementById('circulo');
+		pelotita.addEventListener('click', disparar);
+		var mover = 1;
+		var mover2 = 1;
+		function subirPelota(){
+			console.log('up');
+			mover -= 1;
+			pelotita.style.top = mover + 'px';
+			console.log(pelotita.style.top);
+		}
+		function bajarPelota(){
+			console.log('dwn');
+			mover += 1;
+			pelotita.style.top = mover + 'px';
+			console.log(pelotita.style.top);
+		}
+		function izqPelota(event){
+			console.log('izq', event);
+			mover2 -= 1;
+			pelotita.style.left = mover2 + 'px';
+		}
+		function dchaPelota(event){
+			console.log('dcha', event);
+			mover2 += 1;
+			pelotita.style.left = mover2 + 'px';
+		}
+		function disparar(event){
+			// console.log('disparo');
+			pelotita.style.zIndex = '0';
+			var bala = document.createElement('div');
+
+			var balazo = cajaPelota.appendChild(bala);
+			bala.setAttribute('style', 'width: 10px; height:10px; background-color: black; border: 2px solid black; z-index: 2');
+			pelotita.style.zIndex = '-2';
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejer 14</title>
+</head>
+<body>
+	<script>
+		var interruptor1 = 0;
+		var interruptor2 = 0;
+		do{
+			var numDni = prompt('Introduce nº DNI') 
+			if (numDni != '' && numDni != null && (numDni < 99999999 && numDni > 0)) {
+				// ndniGuardado = numDni
+				interruptor1 = 1;
+			}
+		}while(interruptor1 == 0)
+		do{
+			var ldni = prompt('Introduce letra DNI') 
+			if (ldni.length == 1 && typeof ldni == 'string') {
+				// ldniGuardado = ldni
+				interruptor2 = 1;
+			}
+		}while(interruptor2 == 0)
+		comprobarLetra(numDni, ldni);
+		function comprobarLetra(nDni, lDni) {
+			var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+			var indiceLetra = nDni % 23
+
+			// console.log (letras[indiceLetra], lDni);
+
+			lDni = lDni.toUpperCase()
+			var trueFalse = (lDni === letras[indiceLetra]) ? 'Correcta' : 'Incorrecta';
+
+			console.log('La letra del dni es ', trueFalse);
+		}
+	</script>
+</body>
+</html>

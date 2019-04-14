@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejercicio 16</title>
+</head>
+<body>
+	<script>
+		function contarVocales(pPalabra) {
+			var contador = 0;
+			pPalabra = pPalabra.toLowerCase()
+			for (var i=0; i< pPalabra.length ; i++){
+				if (pPalabra[i] == 'a' || pPalabra[i] == 'e' || pPalabra[i] == 'i' || pPalabra[i] == 'o' || pPalabra[i] == 'u'){
+					contador ++;
+				}
+			}
+			console.log('La palabra ' + pPalabra + ' tiene ' + contador + ' vocales');
+		}
+	</script>
+</body>
+</html>

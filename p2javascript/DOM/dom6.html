@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dom 6</title>
+	<style>
+		.rojo{ 
+			background-color: red;
+			color: white;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<ul id="menu">
+		<li>
+			<a href="https://www.yahoo.es">Yahoo</a>
+			<a href="https://www.google.es">Google</a>
+			<a href="https://www.amazon.es">Amazon</a>
+		</li>
+	</ul>
+
+	<ul>
+		<li>
+			<a href="https://www.neoland.es">Neoland</a>
+			<a href="https://www.neoland.es">Neoland</a>
+			<a href="https://www.neoland.es">Neoland</a>
+		</li>
+	</ul>
+	<script>
+		var elementoUL = document.getElementById('menu');
+		var elementoA = elementoUL.getElementsByTagName('a');
+
+		// for (var i = 0; i < elementoA.length; i++) {
+		// 	elementoA[i].href = 'https://www.estudioclandestino.es';
+		// }
+
+		for (enlace of elementoA){
+			enlace.href = 'https://www.estudioclandestino.es';
+			enlace.innerText = 'Hackeado';
+			enlace.className = 'rojo';
+		}
+	</script>
+</body>
+</html>

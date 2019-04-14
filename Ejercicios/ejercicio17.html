@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejercicio 17</title>
+</head>
+<body>
+	<script>
+		
+		var listadoPersonas = {
+			mujeres: {
+				persona1: {
+					nombre: 'Aaaa aaaa aaaa', estadoCivil: 'soltera', numHijos: 1 
+				},
+				persona2: {
+					nombre: 'Bbbb bbbb bbbb', estadoCivil: 'casada', numHijos: 3
+				},
+				persona3: {
+					nombre: 'Cccc cccc cccc', estadoCivil: 'soltera', numHijos: 4
+				}
+			},
+			hombres: {
+				persona4: {
+					nombre: 'Dddd dddd dddd', estadoCivil: 'soltero', numHijos: 0
+				},
+				persona5: {
+					nombre: 'Eeee eeee eeee', estadoCivil: 'casado', numHijos: 5
+				}
+			}
+		}
+
+		function filtrarHM(pGenero){
+			//console.log(Object.keys(listadoPersonas));
+			switch (pGenero){
+				case 'hombres':
+					filtradoGenero(listadoPersonas.hombres)
+					break;
+				case 'mujeres':
+					filtradoGenero(listadoPersonas.mujeres)
+					break;
+				default:
+					filtradoGenero(listadoPersonas.mujeres);
+					filtradoGenero(listadoPersonas.hombres);
+					break;
+
+			}
+			function filtradoGenero(pListado){
+				for(var value in pListado){
+					if (pListado[value].numHijos >= 3){
+						console.log(pListado[value]);
+					}
+				}
+
+			}
+
+		}
+	</script>
+</body>
+</html>

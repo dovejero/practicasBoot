@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dom 10</title>
+</head>
+<body>
+	<script>
+		function crearCajitas(pElementos){
+
+			for (var i = 1; i <= pElementos; i++){
+				var cajita = document.createElement('div');
+				var texto = document.createTextNode(i);
+				cajita.style.color = 'white';
+				cajita.style.width ='200px';
+				cajita.style.height ='30px';
+				cajita.style.backgroundColor ='green';
+				cajita.style.float = 'left';
+				cajita.style.margin = '5px';
+				cajita.id = 'Caja_' + i;
+				cajita.appendChild(texto);
+				document.body.appendChild(cajita);
+			}
+		}
+
+		function borrarCajitas(){
+			var cajitas = document.getElementsByTagName('div');
+			var cajitas2 = document.querySelectorAll('div');
+			console.log( 'c1: ', cajitas, 'c2: ', cajitas2)
+			for (cajita of cajitas2){
+				cajita.parentNode.removeChild(cajita)
+			}
+		}
+
+	</script>
+</body>
+</html>

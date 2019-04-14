@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dom 11</title>
+	<style>
+		.lightbox{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			background-color: rgba(0,0,0,0.3);
+			width: 100%;
+			height: 70vh;
+		}
+		.lightbox .contenido{
+			width: 80%;
+			height: 300px;
+			background-color: white;
+			margin: 40px auto;
+			border: 2px solid black;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ullam labore numquam, harum, hic, quibusdam cum voluptas ab obcaecati sit accusantium deleniti nam deserunt, ducimus! Illo animi, incidunt quod at.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ullam labore numquam, harum, hic, quibusdam cum voluptas ab obcaecati sit accusantium deleniti nam deserunt, ducimus! Illo animi, incidunt quod at.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ullam labore numquam, harum, hic, quibusdam cum voluptas ab obcaecati sit accusantium deleniti nam deserunt, ducimus! Illo animi, incidunt quod at.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ullam labore numquam, harum, hic, quibusdam cum voluptas ab obcaecati sit accusantium deleniti nam deserunt, ducimus! Illo animi, incidunt quod at.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ullam labore numquam, harum, hic, quibusdam cum voluptas ab obcaecati sit accusantium deleniti nam deserunt, ducimus! Illo animi, incidunt quod at.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ullam labore numquam, harum, hic, quibusdam cum voluptas ab obcaecati sit accusantium deleniti nam deserunt, ducimus! Illo animi, incidunt quod at.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ullam labore numquam, harum, hic, quibusdam cum voluptas ab obcaecati sit accusantium deleniti nam deserunt, ducimus! Illo animi, incidunt quod at.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ullam labore numquam, harum, hic, quibusdam cum voluptas ab obcaecati sit accusantium deleniti nam deserunt, ducimus! Illo animi, incidunt quod at.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ullam labore numquam, harum, hic, quibusdam cum voluptas ab obcaecati sit accusantium deleniti nam deserunt, ducimus! Illo animi, incidunt quod at.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ullam labore numquam, harum, hic, quibusdam cum voluptas ab obcaecati sit accusantium deleniti nam deserunt, ducimus! Illo animi, incidunt quod at.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ullam labore numquam, harum, hic, quibusdam cum voluptas ab obcaecati sit accusantium deleniti nam deserunt, ducimus! Illo animi, incidunt quod at.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ullam labore numquam, harum, hic, quibusdam cum voluptas ab obcaecati sit accusantium deleniti nam deserunt, ducimus! Illo animi, incidunt quod at.</p>
+	</div>
+	
+<!-- 	<div class="lightbox">
+		<div class="contenido">
+			<h2>Titulo publicidad</h2>
+			<p>En un lugar de la mancha de cuyo nombre no puedo acordarme</p>
+		</div>
+	</div> -->
+	<script>
+		var saltaPopup = setInterval(crearPopUp, 3000);
+		function crearPopUp(){
+
+			// Creo Elementos
+			var lightbox = document.createElement('div');
+			lightbox.className = 'lightbox';
+			var contenido = document.createElement('div');
+			contenido.className = 'contenido';
+			var h2 = document.createElement('h2');
+			var textoH2 = document.createTextNode('El pop up mola mucho');
+			var p = document.createElement('p');
+			var textoP = document.createTextNode('En un lugar de la mancha de cuyo nombre no puedo acordarme');
+
+			// relleno elementos
+
+			p.appendChild(textoP);
+			h2.appendChild(textoH2);
+			
+			contenido.appendChild(h2);
+			contenido.appendChild(p);
+
+			lightbox.appendChild(contenido);
+
+			document.body.appendChild(lightbox);
+
+			clearInterval(saltaPopup);
+		}
+	</script>
+</body>
+</html>

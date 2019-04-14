@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Event Listeners</title>
+</head>
+<body>
+	<ul id="menu">
+		<li>Azul</li>
+		<li>Verde</li>
+		<li>Amarillo</li>
+	</ul>
+	
+	<script>
+		var menu = document.getElementById('menu');
+
+		var botones = menu.querySelectorAll('li');
+
+		for (boton of botones){
+			boton.addEventListener('click', cambiarColor)
+		}
+
+		function cambiarColor(event){
+			console.log(event.target);
+			console.log(event);
+			event.target.draggable = true;
+		}
+	</script>
+</body>
+</html>
