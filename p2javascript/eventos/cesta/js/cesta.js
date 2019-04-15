@@ -4,15 +4,20 @@ document.addEventListener('mousemove', mover);
 document.addEventListener('click', crearPelotita);
 var vidas = document.getElementById('vidas');
 var puntos = document.getElementById('puntos');
+var idPelota = 0;
 vidas.textContent = 3;
 puntos.textContent = 0;
+
 function crearPelotita(){
 	var posicionInicial = Math.floor(Math.random() * 245) + 1
 	var pelota = document.createElement('div')
 	pelota.setAttribute('style', 'width: 10px; height:10px; background-color: black; border: 2px solid black; position: absolute; border-radius: 50%; top: 1px');
+	// pelota.id = idPelota;
+	// pelota.className(idPelota);
 	contenedor.appendChild(pelota);
 	pelota.style.left = posicionInicial + 'px';
 	caerPelota(pelota);
+	idPelota ++;
 
 }
 
@@ -28,6 +33,10 @@ function caerPelota(pPelota){
 	      		pelotaBaja();
     		}else {
     			pPelota.parentNode.removeChild(pPelota)
+    			vidas.textContent -= 1;
+    			if (vidas.textContent == 0){
+    				alert('Fin de la partida. Has conseguido ' + puntos.textContent + ' puntos')
+    			}
     		}
   		}, 50);
 	};
@@ -47,3 +56,13 @@ function mover(event){
 }
 
 // pelotita();
+
+
+// Durante la partida
+
+// - Controlar si es punto o vida
+
+// Al finalizar la partida
+// - Eliminar todos los divs de las bolitas 
+// - Acabar los eventos click y mousemove
+
