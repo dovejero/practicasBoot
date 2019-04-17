@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animaciones jquery</title>
+    <style>
+        .circulo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div class="circulo">
+
+    </div>
+
+    <script src="js/jquery-3.4.0.min.js"></script>
+    <script>
+        $('.circulo').hide(3000);
+        $('.circulo').show(300);
+        $('.circulo').fadeOut(1000);
+        $('.circulo').fadeIn(1000);
+        // $('.circulo').fadeToggle()
+        $('.circulo').slideUp(1000);
+        // $('.circulo').slideDown(1000, saludar); //con callback
+        // function saludar(){
+        //     alert('hola');
+        // }
+        $('.circulo').slideDown(1000);
+        $('.circulo').animate({'margin-left': '300px', 'border-radius': '0%'}, 2000)
+
+        $('.circulo').animate({'margin-top': '300px', 'border-radius': '0%'}, 2000, cambiarColor);
+
+        function cambiarColor(){
+            $('.circulo').css({'background-color': 'green', 'transition': '1s', 'border-radius': '50%'})
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>eventos</title>
+    <style>
+        .cuadrado{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Evento de Click</button>
+    <button id="btn2">Evento de mouseover/mouseout</button>
+    <select name="" id="color">
+        <option value="">Selecciona un color</option>
+        <option value="tomato">Rojo</option>
+        <option value="green">Verde</option>
+        <option value="blue">Azul</option>
+        <option value="yellow">Amarillo</option>
+    </select>
+    <div class="cuadrado">
+
+    </div>
+
+
+    <script src="js/jquery-3.4.0.min.js"></script>
+    <script>
+        $('#btn').on('click', mover)
+        var avance = 0;
+        function mover() {
+            avance += 10;
+            $('.cuadrado').animate({'margin-top': avance + 'px'});
+        }
+        $('#btn2').on('mouseover', cambiarColor)
+        function cambiarColor(){
+            $('.cuadrado').css('background-color', 'tomato');
+        }
+        $('#btn2').on('mouseout', cambiarColor2)
+        function cambiarColor2(event){
+            $('.cuadrado').css('background-color', 'black');
+            console.log(event)
+        }
+        $('#color').on('change', selectColor)
+        function selectColor(event){
+            $('.cuadrado').css('background-color', event.target.value);
+            console.log(event)
+        }
+
+    </script>
+</body>
+</html>

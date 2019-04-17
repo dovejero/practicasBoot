@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25em;
+}
+#wrapper{
+    max-width: 35em;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+
+header .insert{
+    background-color: #ddd;
+    border-top: 3px solid black;
+    padding: 20px;
+}
+header .filter{
+    background-color: black;
+    padding: 10px;
+}
+main .tareas article{
+    height: 60px;
+    position: relative;
+    border-bottom: 2px solid black;
+    padding: 10px 0px 10px 20px;
+}
+
+main .tareas .urgente{
+    background-color: lightpink;
+}
+main .tareas .diaria{
+    background-color: lightblue;
+}
+main .tareas .mensual{
+    background-color: lightgreen;
+}
+
+main .tareas article>a{
+    background-color: red;
+    display: inline-block;
+    padding: 17.3px;
+    color: white;
+    text-decoration: none;
+    width: 100px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+main .tareas article>a:hover{
+    width: 125px;
+    transition: 1s;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+p{
+    color: red;
+    text-align: center;
+}

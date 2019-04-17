@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO list</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="insert">
+                <form action="#">
+                    <input type="text" id="tituloTarea" placeholder="Introduce una tarea">
+                    <select id="prioridad">
+                        <option value="">Selecciona una prioridad</option>
+                        <option value="urgente">Urgente</option>
+                        <option value="diaria">Diaria</option>
+                        <option value="mensual">Mensual</option>
+                    </select>
+                    <input type="submit" id="guardar" value="Guardar">
+                </form>
+            </div>
+            <div class="filter">
+                <select id="prioridadFilter">
+                    <option value="">Selecciona una prioridad</option>
+                    <option value="urgente">Urgente</option>
+                    <option value="diaria">Diaria</option>
+                    <option value="mensual">Mensual</option>
+                </select>
+                <input type="text" id="search" placeholder="Introduce una tarea a buscar">
+            </div>
+        </header>
+        <main>
+            <section id="tareas" class="tareas">
+                <!-- <article class="urgente" data-id="1">
+                    <h2>Título de la tarea 1</h2>
+                    <a href="#" title="Eliminar">Eliminar</a>
+                </article>
+                <article class="diaria" data-id="2">
+                    <h2>Título de la tarea 2</h2>
+                    <a href="#" title="Eliminar">Eliminar</a>
+                </article>
+                <article class="mensual" data-id="3">
+                    <h2>Título de la tarea 3</h2>
+                    <a href="#" title="Eliminar">Eliminar</a>
+                </article> -->
+            </section>
+        </main>
+        <footer>
+            APP TODO  - David Ovejero -
+        </footer>
+        <p id="mensaje"></p>
+    </div>
+    <script src="js/modelo.js"></script>
+    <script src="js/vista.js"></script>
+    <script src="js/controlador.js"></script>
+</body>
+</html>

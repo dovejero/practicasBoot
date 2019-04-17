@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funciones de texto</title>
+</head>
+<body>
+    <div id="contenido">
+
+    </div>
+
+    <div id="contenido2">
+
+    </div>
+    <script src="js/jquery-3.4.0.min.js"></script>
+    <script>
+        //si quiero cargar texto sólo
+
+        $('#contenido').text('Hola que ase');
+        
+        //Si quiero cargar un html
+
+        var lorem = 'lorem ipsum'
+        $('#contenido2').html(`<div><h2>${lorem}</h2></div>`);
+
+        //append añade un elemento renderizado nuevo
+
+        $('#contenido2').append('<a href="#">Enlace</a>');
+    </script>
+</body>
+</html>
