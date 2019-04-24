@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.menu{
+    list-style: none;
+}
+.menu li{
+    float: left;
+}
+
+.menu li a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    border-right: 1px solid black;
+    color: black;
+    height: 45px;
+}
+#marcador{
+    /* width: 100px; */
+    height: 45px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-bottom: 5px solid red;
+}

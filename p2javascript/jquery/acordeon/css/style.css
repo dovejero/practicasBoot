@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.faq{
+    margin: 20px;
+}
+
+.faq h2{
+    background-color: lightgray;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.faq h2:before{
+    content: "+";
+    background-color: black;
+    color: white;
+    padding: .1px 5px;
+    margin-right: 5px;
+}
+
+.faq p{
+    display: none;
+}
+.faq .titulo:before{
+    content: "-";
+    background-color: black;
+    color: white;
+    padding: 1px 5px;
+    margin-right: 5px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>gestión de atributos data</title>
+</head>
+<style>
+    .cuadrado{
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="cuadrado" data-color="blue"></div>
+    <div class="cuadrado" data-color="red"></div>
+    <div class="cuadrado" data-color="green"></div>
+    <div class="cuadrado" data-color="yellow"></div>
+
+    <script src="js/jquery-3.4.0.min.js"></script>
+    <script>
+
+        // $('.cuadrado').css('background-color', 'tomato');
+
+        //bucles con objetos en jquery.
+
+        $('.cuadrado').each(function(){
+            var color = $(this).data('color');
+            $(this).css('background-color', color);
+        });
+
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:700|Montserrat:400,700');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    /* font-family: 'Libre Baskerville', serif; */
+}
+h1, h2{
+    font-family: 'Libre Baskerville', serif; 
+}
+h3, h4{
+    font-family: 'Montserrat', sans-serif;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+header{
+    color: white;
+    /* height: 200px; */
+    width: 100%;
+    background-color: black;
+    padding: 20px 0 70px 0;
+    text-align: center;
+}
+main{
+    width: 100%;
+    /* height: 500px; */
+}
+.row{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+section{
+    /* height: 100%; */
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: red; */
+
+}
+.velo{
+    color: white;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0);
+    text-align: center;
+    padding: 180px;
+
+}
+footer{
+    color: white;
+    background-color:black;
+    width: 100%;
+    /* height: 40px; */
+    padding: 10px;
+}
+
+section article{
+    width: 100%;
+    margin-bottom: -5px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+section article .velo{
+    opacity: 1;
+    transition: opacity 1s;
+    width: 100%;
+}
+/* section article:hover .velo{
+    opacity: 1;
+    transition: opacity 1s;
+} */
+section article img {
+    transform: rotateZ(0deg);
+    transition: 1s;
+}
+/* section article:hover img {
+    transform: rotateZ(10deg) scale(1.5);
+    transition: 1s;
+} */
+/* section article h4 {
+    margin-right: -800px;
+    transition: 1s;
+}
+section article:hover h4 {
+    margin-right: 0px;
+    transition: 1s;
+}
+section article h3 {
+    margin-left: -800px;
+    transition: 1s;
+}
+section article:hover h3 {
+    margin-left: 0px;
+    transition: 1s;
+} */
+
+/* js */
+
+.izquierda i{
+    color: white;
+    position: absolute;
+    font-size: 3em;
+    top: 200px;
+    left: 10px;
+}
+.derecha i{
+    color: white;
+    position: absolute;
+    font-size: 3em;
+    top: 200px;
+    right: 10px;
+}
+
+@media(max-width: 500px){
+    section article{
+        width: 95%;
+        margin: -5px auto 0 auto;
+    }
+    .velo{
+        padding: 120px;
+    
+    }
+}
