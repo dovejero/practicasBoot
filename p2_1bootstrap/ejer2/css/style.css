@@ -1,0 +1,46 @@
+img{
+    width: 100%;
+    height: auto;
+}
+
+.bg-dark {
+    background-color: black !important;
+}
+.jumbotron{
+    text-align: center;
+    background-image: url(../images/home.jpg);
+    background-size: cover;
+    height: 450px;
+    background-position: center;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: soft-light;
+}
+main p{
+    margin-bottom: 15px;
+    color: gray;
+}
+.linea{
+    border-color: black;
+    width: 10%;
+}
+
+.card-img-top{
+    width: 60%;
+    margin: 0 auto;
+}
+.bg-lightgray{
+    background-color: lightgray;
+}
+
+.form-control {
+    border: 0px !important;
+    border-bottom: 1px solid #ced4da !important;
+    border-radius: 0px !important;
+}
+.form-group textarea{
+    border-bottom: 0px !important;
+    border: 1px solid #ced4da !important;
+    border-radius: 0px !important;
+    resize: none;
+}
