@@ -1,0 +1,20 @@
+<ul>
+  <li>
+    <a [routerLink]="['']" [routerLinkActive]="'activa'">Home</a>
+  </li>
+  <li>
+    <a [routerLink]="['/hola']" [routerLinkActive]="'activa'">Saludo</a>
+  </li>
+  <li>
+    <a [routerLink]="['producto', 345]" [routerLinkActive]="'activa'">Producto</a>
+  </li>
+  <li>
+    <a [routerLink]="['producto', 345, 'review']" [routerLinkActive]="'activa'">Producto reviewng</a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>
+<button (click)="hClick('')">HOME</button>
+<button (click)="hClick('hola')">SALUDO</button>
+
+<!-- <app-lista-personas></app-lista-personas> -->

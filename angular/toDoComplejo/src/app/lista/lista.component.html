@@ -1,0 +1,23 @@
+<!-- <div class="pt-4" *ngFor="let elemento of listaDatos;let indice=index; let par=odd" [ngClass]="{'cajaPar': par, 'cajaImpar': par }"> 
+  <h2 class="titulo">{{elemento.titulo}}</h2>
+  <p class="descripcion">{{elemento.descripcion}}</p>
+  <p class="categoria">{{elemento.categoria}}</p>
+  <button (click)="eliminarItem(indice)">ELIMINAR</button>
+  {{par}}
+</div> -->
+
+<div class="card" *ngFor="let elemento of listaDatos;let indice=index; let par=odd" >
+    <div class="card-header" [ngClass]="{'cajaPar': par, 'cajaImpar': !par }">
+      Tarea: {{indice + 1}}
+    </div>
+    <div class="card-body" [ngClass]="{'cajaCompleta': elemento.completa, 'cajaIncompleta': !elemento.completa }">
+      <h5 class="card-title">{{elemento.titulo}}</h5>
+      <p class="card-text">{{elemento.descripcion}}</p>
+      <p class="card-text">{{elemento.categoria}}</p>
+      <input type="checkbox" [checked]="elemento.completa" (change)="marcarCompleta(elemento)">
+      <hr>
+      <a *ngIf="!elemento.completa" href="#" class="btn btn-primary" (click)="marcarCompleta(elemento)">Marcar</a>
+      <a *ngIf="elemento.completa"href="#" class="btn btn-primary" (click)="marcarCompleta(elemento)">Desmarcar</a>
+      <a href="#" class="btn btn-primary eliminar" (click)="eliminarItem(indice)">Eliminar</a>
+    </div>
+  </div>

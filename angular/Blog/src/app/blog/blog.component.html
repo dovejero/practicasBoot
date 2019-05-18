@@ -1,0 +1,24 @@
+<div *ngIf="allBlogs.length > 0">
+  <div class="form-group">
+    <label for="">Filtro Categoría</label>
+    <select class="form-control" [(ngModel)]="fCategoria" (change)="filtrar()">
+      <option value="all">TODOS</option>
+      <option value="fullstack">FullStack</option>
+      <option value="ux">UX/UI</option>
+    </select>
+  </div>
+  <!-- <button type="button" class="btn btn-info float-right" (click)="filtrar()">Enviar</button> -->
+  <hr class="my-4">
+  <div class="jumbotron" *ngFor="let unBlog of allBlogs">
+    <h1 class="display-4">{{unBlog.titulo}}</h1>
+    <p class="lead">{{unBlog.texto}}</p>
+    <hr class="my-4">
+    <p class="">{{unBlog.autor}}</p>
+    <p class="">{{unBlog.imagen}}</p>
+    <p class="">{{unBlog.fecha}}</p>
+    <p class="">{{unBlog.categoria}}</p>
+  </div>
+</div>
+
+<h3 *ngIf="allBlogs.length == 0">No hay contenido.</h3>
+<!-- (this.unBlog.titulo, this.unBlog.texto, this.unBlog.autor, this.unBlog.imagen, this.unBlog.fecha, this.unBlog.categoria); -->

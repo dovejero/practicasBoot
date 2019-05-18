@@ -1,0 +1,10 @@
+<div class="contenedor">
+<h1>Semáforo</h1>
+  <div *ngIf="oculto" id="circulo" [ngClass]="{'rojo': (colorSemaforo == 'rojo'), 'ambar': (colorSemaforo == 'ambar'), 'verde': (colorSemaforo == 'verde')}">
+
+  </div>
+  <button (click)="cambiarColor('rojo')" id="rojo">Rojo</button>
+  <button (click)="cambiarColor('ambar')" id="ambar">Ambar</button>
+  <button (click)="cambiarColor('verde')" id="verde">Verde</button>
+</div>
+<button (click)="ocultar()" id="ocultarId">Ocultar/Mostrar</button>

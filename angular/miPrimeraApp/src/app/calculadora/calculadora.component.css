@@ -1,0 +1,52 @@
+.contendor{
+    background-color: #40739e;
+    width: 200px;
+    height: 350px;
+    padding-top: 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.display{
+    background-color: #dcdde1;
+    width: 180px;
+    height: 20px;
+    margin: 0 auto;
+    text-align: right;
+    padding-right: 5px;
+}
+.numeros{
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    width: 180px;
+}
+.numeros button{
+    margin-top: 20px;
+    width: 33%;
+    height: 25px;
+}
+#cero{
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 40%;
+    height: 25px;
+}
+.operadores{
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    width: 180px;
+    height: 25px;
+}
+.operadores button{
+    margin-top: 20px;
+    width: 25%;
+    height: 25px;
+}
+#igual{
+    width: 100%!important;
+}
+button:hover{
+    background-color: #7f8fa6;
+}

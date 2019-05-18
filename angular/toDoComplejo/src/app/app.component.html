@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <app-formulario (todoSent)="metodoOutput($event)"></app-formulario> 
+    </div>
+    <div class="col-8">
+      <app-lista [listaDatos]="arrayTareas" [(numtareas)]="numeroTareas" [Pbooleano] = "booleanoP"></app-lista>
+    </div>
+    <!-- <div class="colorFondo">
+        <app-prueba [(numero)] = "valorInicial"></app-prueba>
+    </div> -->
+    <!-- <div>
+        <h1>{{valorInicial}}</h1>
+    </div> -->
+    <div>
+      <p>Número de tareas creadas</p>
+      <h1>{{numeroTareas}}</h1>
+    </div>
+
+  </div>
+</div>
+
+
+
+

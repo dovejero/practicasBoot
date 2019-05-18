@@ -1,0 +1,58 @@
+<div class="wrapper">
+  <form novalidate [formGroup]="formulario" (ngSubmit)='tratarDatos()'>
+    <div class="form-group">
+      <label for="" class="col-sm-2 col-form-label col-form-label-sm">Nombre</label>
+      <input type="text" class="form-control form-control-sm" formControlName="nombre">
+      <small *ngIf="formulario.controls['nombre'].errors && formulario.controls['nombre'].touched" id="errorNombre"
+        class="form-text text-muted">Campo
+        Requerido</small>
+    </div>
+    <div class="form-group">
+      <label for="" class="col-sm-2 col-form-label col-form-label-sm">Apellidos</label>
+      <input type="text" class="form-control form-control-sm" formControlName="apellidos">
+      <small *ngIf="formulario.controls['apellidos'].errors && formulario.controls['apellidos'].touched"
+        id="errorNombre" class="form-text text-muted">Campo
+        Requerido</small>
+    </div>
+    <div class="form-group">
+      <label for="" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+      <input type="text" class="form-control form-control-sm" formControlName="email">
+      <small *ngIf="formulario.controls['email'].errors && formulario.controls['email'].touched" id="errorNombre"
+        class="form-text text-muted">Email inválido</small>
+    </div>
+    <div class="form-group">
+      <label for="" class="col-sm-2 col-form-label col-form-label-sm">Edad</label>
+      <input type="number" class="form-control form-control-sm" formControlName="edad">
+      <small *ngIf="formulario.controls['edad'].errors?.required  && formulario.controls['edad'].touched"
+        id="errorNombre" class="form-text text-muted">Edad obligatoria</small>
+      <small *ngIf="formulario.controls['edad'].errors?.edad  && formulario.controls['edad'].touched" id="errorNombre"
+        class="form-text text-muted">{{formulario.controls['edad'].errors.edad}}</small>
+    </div>
+    <div class="form-group">
+      <label for="" class="col-sm-2 col-form-label col-form-label-sm">DNI</label>
+      <input type="text" class="form-control form-control-sm" formControlName="dni">
+      <small *ngIf="formulario.controls['dni'].errors?.required && formulario.controls['dni'].touched" id="errorNombre"
+        class="form-text text-muted">Campo DNI obligatorio</small>
+      <small *ngIf="formulario.controls['dni'].errors?.dni && formulario.controls['dni'].touched" id="errorNombre"
+        class="form-text text-muted">{{formulario.controls['dni'].errors.dni}}</small>
+    </div>
+    <div class="form-group">
+      <label for="" class="col-sm-2 col-form-label col-form-label-sm">Password</label>
+      <input type="password" class="form-control form-control-sm" formControlName="password">
+      <small *ngIf="formulario.controls['password'].errors && formulario.controls['password'].touched" id="errorNombre"
+        class="form-text text-muted">Password entre 4 y 8 carácteres y uno de ellos numérico</small>
+    </div>
+    <div class="form-group">
+      <label for="" class="col-sm-2 col-form-label col-form-label-sm">Password 2</label>
+      <input type="password" class="form-control form-control-sm" formControlName="password2">
+      <small *ngIf="formulario.controls['password2'].errors && formulario.controls['password2'].touched"
+        id="errorNombre" class="form-text text-muted">Password entre 4 y 8 carácteres y uno de ellos numérico</small>
+      <small *ngIf="formulario.errors && formulario.errors['password2']" id="errorNombre"
+        class="form-text text-muted">Password diferente a
+        password 2</small>
+    </div>
+    <div class="form-group">
+      <input type="submit" value="enviar" class="btn btn-block btn-info" [disabled]="!formulario.valid">
+    </div>
+  </form>
+</div>

@@ -1,0 +1,16 @@
+<!-- Hola Mundo!!!! -->
+<!-- <app-saludo></app-saludo> -->
+
+<!-- Con corchetes le pasamos una variable o javascript sin corchetes un valor directamente -->
+<app-contador inicio="2" otroInput="Input de prueba" end="12"></app-contador>
+<app-contador inicio="2" [otroInput]="varInput" (pruebaOutput)="eventoOutput($event)"></app-contador>
+<p>{{salida}}</p> 
+
+<app-calculadora></app-calculadora>
+
+<!-- <app-formulariosimple></app-formulariosimple> -->
+
+<app-formularioregistro></app-formularioregistro>
+
+<app-suma num1="3" num2="5" (total2)="OutputSuma($event)"></app-suma>
+<h1>{{suma}}</h1>

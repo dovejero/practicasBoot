@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div class="cabecera text-center bg-info text-white">
+        <h1>Blog en Angular</h1>
+    </div>
+    <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active" [routerLink]="['blog']">Artículos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['new']">nuevo Post</a>
+            </li>
+          </ul>
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+</div>

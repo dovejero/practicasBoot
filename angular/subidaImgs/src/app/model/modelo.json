@@ -1,0 +1,16 @@
+{
+    "parques": [
+        {
+            "nombre": "Parque del Oeste",
+            "latitude": 40.22321212,
+            "longitude": -3.79299932,
+            "descripcion": "Es mu bonico. Antes se hacían botellones."
+        },
+        {
+            "nombre": "Parque del Capricho",
+            "latitude": 40.7821212,
+            "longitude": -3.99299932,
+            "descripcion": "Muchas florecicas y algún laguito"
+        }
+    ]
+}

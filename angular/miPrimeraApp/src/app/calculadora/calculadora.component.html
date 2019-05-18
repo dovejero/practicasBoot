@@ -1,0 +1,23 @@
+<div class="contendor">
+  <div class="display">{{resultado}}</div>
+  <div class="numeros">
+    <button (click) = "operador('1')">1</button>
+    <button (click) = "operador('2')">2</button>
+    <button (click) = "operador('3')">3</button>
+    <button (click) = "operador('4')">4</button>
+    <button (click) = "operador('5')">5</button>
+    <button (click) = "operador('6')">6</button>
+    <button (click) = "operador('7')">7</button>
+    <button (click) = "operador('8')">8</button>
+    <button (click) = "operador('9')">9</button>
+    <button (click) = "operador('0')" id="cero">0</button>
+    <!-- <button (click) = "operador()">AC</button> -->
+  </div>
+  <div class="operadores">
+    <button (click) = "operador('+')">+</button>
+    <button (click) = "operador('-')">-</button>
+    <button (click) = "operador('*')">*</button>
+    <button (click) = "operador('/')">/</button>
+    <button (click) = "igual('=')" id="igual">=</button>
+  </div>
+</div>

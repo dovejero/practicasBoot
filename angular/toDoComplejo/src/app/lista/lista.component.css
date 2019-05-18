@@ -1,0 +1,19 @@
+.cajaPar{
+    background-color: lightcoral;
+}
+
+.cajaImpar{
+    background-color: lightgreen;
+}
+
+.cajaCompleta{
+    background-color: lightgrey;
+}
+
+.cajaIncompleta{
+    background-color: lightblue;
+}
+
+.eliminar{
+    float: right;
+}

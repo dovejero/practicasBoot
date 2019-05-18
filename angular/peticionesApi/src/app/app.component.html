@@ -1,0 +1,27 @@
+<!-- {{planetas.results | json}} -->
+
+<div>
+  <ul *ngFor='let planeta of planetas'>
+    <li> {{planeta.name}}</li>
+  </ul>
+</div>
+<button [disabled]="(contador == 1)" (click)="paginado(-1)">Anterior</button><button
+  (click)="paginado(1)">Siguiente</button>
+
+<button [disabled]="disAnterior" (click)="anterior()">Anterior</button><button [disabled]="disSiguiente"
+  (click)="siguiente()">Siguiente</button>
+<hr>
+<div>
+  <div>
+    Max<input type="text" [(ngModel)]='envioPostMax'>
+  </div>
+  <div>
+    Min<input type="text" [(ngModel)]='envioPostMin'>
+  </div>
+  <div><button (click)='genRandom()'>
+      Enviar
+    </button></div>
+  <div>
+    {{valRandom}}
+  </div>
+</div>

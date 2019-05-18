@@ -1,0 +1,60 @@
+<div class="container">
+  <form novalidate [formGroup]="formulario" (ngSubmit)="tratarSubmit()">
+    <div class="form-group">
+      <label for="">Name</label>
+      <input type="text" class="form-control" placeholder="Name" formControlName="name">
+      <small *ngIf="formulario.controls['name'].errors && control" class="form-text text-muted">Campo
+        Requerido</small>
+    </div>
+    <div class="form-group">
+      <label for="">Surname</label>
+      <input type="text" class="form-control" placeholder="Surname" formControlName="surname">
+      <small *ngIf="formulario.controls['surname'].errors && control" class="form-text text-muted">Campo
+        Requerido</small>
+    </div>
+    <div class="form-group">
+      <label for="">Username</label>
+      <input type="text" class="form-control" placeholder="Username" formControlName="username">
+      <small *ngIf="formulario.controls['username'].errors && control" class="form-text text-muted">Campo
+        Requerido</small>
+    </div>
+    <div class="form-group">
+      <label for="">Password</label>
+      <input type="password" class="form-control" placeholder="Password" formControlName="password">
+      <small *ngIf="formulario.controls['password'].errors?.required && control" class="form-text text-muted">Campo
+        Requerido</small>
+      <small *ngIf="formulario.controls['password'].errors?.pattern && control" class="form-text text-muted">Password
+        entre 4 y 8 carácteres y uno de ellos numérico</small>
+    </div>
+    <div class="form-group">
+      <label for="">Repite Password</label>
+      <input type="password" class="form-control" placeholder="Repite Password" formControlName="password2">
+      <small *ngIf="formulario.controls['password2'].errors?.required && control" class="form-text text-muted">Campo
+        Requerido</small>
+      <small *ngIf="(formulario.value.password != formulario.value.password2)  && control"
+        class="form-text text-muted">No coincide
+        password y su repetición</small>
+    </div>
+    <div class="form-group">
+      <label for="">Mail</label>
+      <input type="text" class="form-control" placeholder="Mail" formControlName="mail">
+      <small *ngIf="formulario.controls['mail'].errors?.required && control" class="form-text text-muted">Campo
+        Requerido</small>
+      <small *ngIf="formulario.controls['mail'].errors?.pattern && control" class="form-text text-muted">Email
+        inválido</small>
+    </div>
+    <div class="form-group">
+      <label for="">Address</label>
+      <input type="text" class="form-control" placeholder="Adress" formControlName="address">
+      <small *ngIf="formulario.controls['address'].errors && control" class="form-text text-muted">Campo
+        Requerido</small>
+    </div>
+    <div class="form-group">
+      <label for="">Age</label>
+      <input type="text" class="form-control" placeholder="Age" formControlName="age">
+      <small *ngIf="formulario.controls['age'].errors && control" class="form-text text-muted">Campo
+        Requerido</small>
+    </div>
+    <button type="submit" class="btn btn-info float-right">Enviar</button>
+  </form>
+</div>

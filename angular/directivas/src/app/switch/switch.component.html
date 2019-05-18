@@ -1,0 +1,11 @@
+<div [ngSwitch]="color" [ngClass] ="{'Crojo': color=='rojo', 'Cverde': color=='verde', 'Cazul': color == 'azul'}">
+  <div appSubrayado *ngSwitchCase="'rojo'">Div de Rojo</div>
+  <div *ngSwitchCase="'verde'">Div de Verde</div>
+  <div *ngSwitchCase="'azul'">Div de Azul</div>
+  <div *ngSwitchDefault>Ningún color</div>
+</div>
+<div>
+  <button appSubrayado (click)="cambioColor('rojo')">Cambio a Rojo</button>
+  <button (click)="cambioColor('verde')">Cambio a Verde</button>
+  <button (click)="cambioColor('azul')">Cambio a Azul</button>
+</div>

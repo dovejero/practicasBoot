@@ -1,0 +1,17 @@
+<h1>Lista Personas</h1>
+
+<ul *ngFor="let persona of arrPersonas">
+  <li>{{persona.nombre}} {{persona.apellido}} {{persona.edad}} {{persona.ciudad}}</li>
+</ul>
+
+<h1>Mayores Edad</h1>
+
+<ul *ngFor="let persona of arrPersonasMayores">
+    <li>{{persona.nombre}} {{persona.apellido}} {{persona.edad}} {{persona.ciudad}}</li>
+</ul>
+
+<input type="text" [(ngModel)] = "nombre" >
+<button (click) = "buscarNombre()"></button>
+
+<h1>Buscados</h1>
+{{arrPersonasNombre}}

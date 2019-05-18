@@ -1,0 +1,17 @@
+<div class="row margen">
+  <div class="col-3">
+    <img [src]="empleado.imagen" alt="" class="Responsive image">
+  </div>
+  <div class="col-8">
+    <h3>{{empleado.nombre}} {{empleado.apellidos}}</h3>
+    <p>{{empleado.departamento}}</p>
+  </div>
+  <div class="col-1">
+    <div [ngSwitch] = "empleado.departamento">
+        <i class="fas fa-file-code" *ngSwitchCase="'desarrollo'"></i>
+        <i class="fab fa-sketch" *ngSwitchCase="'ux'"></i>
+        <i class="fas fa-user-circle" *ngSwitchCase="'rrhh'"></i>
+        <i class="fas fa-file-invoice-dollar" *ngSwitchCase="'contabilidad'"></i>
+    </div>
+  </div>
+</div>

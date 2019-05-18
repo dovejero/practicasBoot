@@ -1,0 +1,36 @@
+<div>
+  <form novalidate [formGroup]="formulario" (ngSubmit)="tratarSubmit()">
+    <div class="form-group">
+      <label for="">Nombre</label>
+      <input type="text" class="form-control" placeholder="Nombre" formControlName="nombre">
+      <small *ngIf="formulario.controls['nombre'].errors && control" class="form-text text-muted">Campo
+        Requerido</small>
+    </div>
+    <div class="form-group">
+      <label for="">Apellido</label>
+      <input type="text" class="form-control" placeholder="Apellido" formControlName="apellido">
+      <small *ngIf="formulario.controls['apellido'].errors && control" class="form-text text-muted">Campo
+        Requerido</small>
+    </div>
+    <div class="form-group">
+      <label for="">Edad</label>
+      <input type="number" class="form-control" placeholder="Edad" formControlName="edad">
+      <small *ngIf="formulario.controls['edad'].errors && control" class="form-text text-muted">Campo
+        Requerido</small>
+    </div>
+    <div class="form-group">
+      <label for="">Imagen</label>
+      <input type="file" class="form-control" placeholder="Imagen" formControlName="imagen"
+        (change)="onChangeImg($event)">
+      <small *ngIf="formulario.errors && formulario.errors['url'] && control"
+        class="form-text text-muted">{{formulario.errors['url']}}</small>
+    </div>
+    PORCENTAJE FICHERO: {{uploadPercent | async | number: '1.0-0'}}
+    <button type="submit" class="btn btn-info float-right">Enviar</button>
+  </form>
+  <br>
+  <br>
+  <div *ngIf="pintar">
+    <img [src]="formulario.value.url" alt="">
+  </div>
+</div>

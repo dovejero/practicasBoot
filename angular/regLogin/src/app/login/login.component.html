@@ -1,0 +1,10 @@
+<div class="container">
+  <div>
+    <form novalidate #login="ngForm" (ngSubmit)="logarse(login.value)">
+      <input type="text" name="username" placeholder="user" ngModel>
+      <input type="text" name="password" placeholder="pass" ngModel>
+      <input type="submit" value="Enviar">
+    </form>
+    <small *ngIf="userCorrecto" class="form-text text-muted">Usuario o contraseña Incorrecto</small>
+  </div>
+</div>

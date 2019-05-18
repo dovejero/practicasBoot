@@ -1,0 +1,25 @@
+<div class="card bg-light mb-3">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img [src]="escritor.imagen" class="card-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{escritor.nombre}} {{escritor.apellidos}}</h5>
+        <p class="card-text">{{escritor.pais}}</p>
+        <p class="card-text">{{escritor.id}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<ul>
+  <li>
+    <a *ngIf = "mLibros" [routerLink]="['libros']">Libros</a>
+    <a *ngIf = "!mLibros" [routerLink]="['/escritor/' + escritor.id]">Ocultar Libros</a>
+  </li>
+  <li>
+    <a [routerLink]="['/lista']">Volver a Listas</a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <app-cabecera></app-cabecera>
+      </div>
+      <div class="col-7">
+        <app-productos titulo="Comida" [lisProducto]= "arrComida" (listaSelec)="listaTratada($event)"></app-productos>
+        <app-productos titulo="Bebida" [lisProducto]= "arrBebida" (listaSelec)="listaTratada($event)"></app-productos>
+      </div>
+      <div class="col-5">
+        <app-factura [listadoPintar]= "listaTratadaView" (elementoElim)="eliminarProducto($event)"></app-factura>
+      </div>
+    </div>
+  </div>
+ 
+  

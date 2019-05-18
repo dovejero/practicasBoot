@@ -1,0 +1,24 @@
+<div>
+  <div class="form-group">
+    <label for="">Nombre</label>
+    <input type="text" class="form-control" placeholder="Nombre del Empleado" [(ngModel)]="empleado.nombre">
+  </div>
+  <div class="form-group">
+    <label for="">Apellidos</label>
+    <input type="text" class="form-control" placeholder="Apellidos del Empleado" [(ngModel)]="empleado.apellidos">
+  </div>
+  <div class="form-group">
+    <label for="">Departamento</label>
+    <select class="form-control" [(ngModel)]="empleado.departamento">
+      <option value="desarrollo">Desarrollo</option>
+      <option value="ux">UX/UI</option>
+      <option value="rrhh">Recursos Humanos</option>
+      <option value="contabilidad">Contabilidad</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="">Imagen</label>
+    <input type="text" class="form-control" placeholder="Imagen del Empleado" [(ngModel)]="empleado.imagen">
+  </div>
+  <button type="button" class="btn btn-info float-right" (click)="enviarEmpleado()">Enviar</button>
+</div>

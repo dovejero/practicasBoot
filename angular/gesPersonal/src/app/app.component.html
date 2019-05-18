@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <div class="cabecera text-center bg-info text-white">
+    <h1>Gestión de Empleados</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <app-lis-empleados [empleados]="arrayEmpleados"></app-lis-empleados>
+      </div>
+      <div class="col-4">
+        <app-formulario (empleadoSent)="hEmpleadoSent($event)"></app-formulario>
+      </div>
+    </div>
+  </div>
+</div>

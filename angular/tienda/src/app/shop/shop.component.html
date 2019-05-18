@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="form-group">
+    <label for="">Departamento</label>
+    <select class="form-control" [(ngModel)]='fProducto' (change)="buscarCategoria()">
+      <option value="all">All</option>
+      <option value="macbook">MacBook</option>
+      <option value="ipad">Ipad</option>
+      <option value="accesorios">Accesorios</option>
+    </select>
+  </div>
+  <div class="row">
+    <div class="col-4" *ngFor="let producto of listaProductos">
+      <div class="card tamCaja">
+        <img [src]=producto.image class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{producto.name}}</h5>
+          <p class="card-text">{{producto.description}}
+          </p>
+          <p class="card-text">{{producto.price | currency: 'EUR'}}</p>
+          <a class="btn btn-primary" (click)="comprarProducto(producto.id)">Añadir a la cesta</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
