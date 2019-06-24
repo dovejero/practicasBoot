@@ -68,7 +68,7 @@ export class AppComponent {
 
       let marker = new google.maps.Marker({
         position: place.geometry.location,
-        map: this.map,
+        map: this.map
       })
       this.map.setCenter(place.geometry.location)
       console.log(place);

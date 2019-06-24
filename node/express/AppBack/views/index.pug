@@ -1,0 +1,38 @@
+extends layout.pug
+
+mixin lista(titulo)
+  h2 Lista #{titulo}
+  ul  
+    li uno
+    li dos
+    li tres
+
+block titulo
+  title titulo del index
+
+block contenido
+
+  h2 Cabecera H2
+  p Párrafo debajo de la cabecera
+  div
+    p Párrafo dentro del DIV
+    a(href="http://www.google.es")
+  h4= title
+  h5(class="estilos") El valor del title es #{title}
+  h5.estilos El valor del title es #{title}
+
+  .clasePrueba
+    ul
+      - for(let i = 0; i<5; i++)
+        li Opción #{i}
+
+  .otraClase
+    ol
+      each pers in personas
+        li #{pers.nombre} #{pers.apellido}
+
+  .yotra
+    +lista('Primera')
+    +lista('Segunda')
+
+  //- comentarios

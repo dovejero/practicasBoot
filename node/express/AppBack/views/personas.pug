@@ -1,0 +1,21 @@
+extends layout.pug
+
+block contenido
+
+  form(action="/personas/valores", method="post")
+    .form-group
+      label(for="nombre") Nombre
+      input.form-control(type="text", placeholder="Nombre" name="nombre")
+    .form-group
+      label(for="apellidos") Apellidos
+      input.form-control(type="text", placeholder="Apellidos" name="apellidos")
+    .form-group
+      label(for="edad") Edad
+      input.form-control(type="number", placeholder="Edad" name="edad")
+    .form-group
+      label(for="direccion") Dirección
+      input.form-control(type="text", placeholder="Dirección" name="direccion")      
+  
+    button.btn.btn-primary(type="submit") Enviar
+
+  //- comentarios

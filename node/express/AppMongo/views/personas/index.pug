@@ -1,0 +1,28 @@
+extends ../layout.pug
+
+block content
+  table.table.table-striped
+        tr
+          th Nombre
+          //- th Apellidos
+          th Edad
+          th Empresa
+          th Coche
+
+        each val in arrPersonas
+          tr
+            //- td= val.nombre
+            //- td= val.apellidos
+            td= val.nombre_completo
+            td= val.edad
+            td= val.empresa
+            td= val.coche
+            td 
+              a.btn.btn-outline-dark(href="/personas/listOne/" + val.id) Ver
+            //- td 
+            //-   a.btn.btn-outline-dark(href="/alumnos/edit/"+ alumno.id) Editar
+            td 
+              a.btn.btn-outline-dark(href="/personas/deleteOne/"+ val.id) Borrar 
+        else
+          tr
+            td No hay resultados        

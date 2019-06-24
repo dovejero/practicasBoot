@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  .card(style='width: 42rem;')
+    .card-header
+      h4 CHAT
+      p#numusers
+    .card-body(style='height: 16rem; overflow-x: scroll')
+      ul#contenido
+        li Bienvenidos
+    .card-footer
+      form.form-inline
+        .form-group.mb-2
+          input#nombre.form-control(type='text', value='' placeholder='Nombre' style='width: 10rem')
+        .form-group.mx-sm-3.mb-2
+          input#mensaje.form-control(type='text', value='' placeholder='Mensaje' style='width: 20rem')
+        a#boton.btn.btn-primary.btn-lg.active(href='#', role='button', aria-pressed='true') Enviar
+
+
+
+  script(src="/socket.io/socket.io.js")
+  script(src='https://code.jquery.com/jquery-3.4.1.min.js', integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=', crossorigin='anonymous')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js')
+  script(src='/javascripts/main.js')
+
+

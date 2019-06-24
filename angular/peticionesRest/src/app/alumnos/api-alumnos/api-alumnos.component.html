@@ -1,0 +1,28 @@
+<h2>Gestión de Alumnos</h2>
+<button type="button" class="btn btn-dark" routerLink="/newalumnos">Nuevo Alumno</button>
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Edad</th>
+      <th scope="col">Matrícula</th>
+      <th scope="col">Nota media</th>
+      <th scope="col">Sexo</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let alumno of alumnos">
+      <td>{{alumno.nombre}}</td>
+      <td>{{alumno.apellidos}}</td>
+      <td>{{alumno.edad}}</td>
+      <td>{{alumno.matricula}}</td>
+      <td>{{alumno.notamedia}}</td>
+      <td>{{alumno.sexo}}</td>
+      <td><button type="button" class="btn btn-primary">Modificar</button></td>
+      <td><button type="button" class="btn btn-warning" (click)="eliminar(alumno.id)">Eliminar</button></td>
+    </tr>
+  </tbody>
+</table>
